@@ -23,6 +23,7 @@ function buildCrossLinkBanners() {
     { href: "../takehome-calculator/", text: "在職中の手取り年収も計算してみる →" },
     { href: "../insurance-checker/", text: "退職後の保障を保険診断で確認する →" },
     { href: "../career-checker/", text: "転職・再就職を考えるなら転職エージェント診断へ →" },
+    { href: "../resignation-letter-generator/", text: "退職願・退職届の文面を自動作成する →" },
   ];
   return banners.map((b) => `<a class="cross-link-banner" href="${escapeHtml(b.href)}">${escapeHtml(b.text)}</a>`).join("");
 }
