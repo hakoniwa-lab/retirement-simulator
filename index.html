@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>退職金手取りシミュレーター | 退職所得控除を踏まえて概算計算</title>
+<meta name="description" content="退職金の額面と勤続年数を入力するだけで、退職所得控除を踏まえた所得税・住民税を差し引いた手取り額の目安を計算できます。">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6465548593525933" crossorigin="anonymous"></script>
+<link rel="canonical" href="https://hakoniwa-lab.github.io/retirement-simulator/">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app" class="app">
+
+  <header class="app-header">
+    <p class="app-header__eyebrow">かんたん概算計算</p>
+    <h1 class="app-header__title">退職金手取り<br class="sp-only">シミュレーター</h1>
+    <p class="app-header__lead">退職金の額面と勤続年数を入力するだけで、退職所得控除を踏まえた手取り額の目安を計算します。</p>
+  </header>
+
+  <main id="main" class="main">
+
+    <!-- intro/form screen -->
+    <section id="screen-intro" class="screen" data-screen="intro">
+      <div class="card card--intro">
+        <form id="calc-form">
+          <div class="form-field">
+            <label for="retirement_pay">退職金の額面(見込み額)</label>
+            <input type="number" id="retirement_pay" name="retirement_pay" class="quiz-select" placeholder="例: 20000000" min="0" step="10000" required>
+          </div>
+
+          <div class="form-field">
+            <label for="years">勤続年数</label>
+            <input type="number" id="years" name="years" class="quiz-select" placeholder="例: 20" min="1" max="60" step="1" required>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--large">手取り額を計算する</button>
+        </form>
+        <p class="intro-disclaimer">※ 本シミュレーターは一般的な会社員(役員以外)の退職一時金を想定した概算です。確定拠出年金の一時金受取や、役員退職金(特定役員退職手当等)、他の退職金との合算調整がある場合は計算結果が異なります。正確な金額は源泉徴収票・退職所得の受給に関する申告書や税理士にご確認ください。</p>
+      </div>
+    </section>
+
+    <!-- result screen -->
+    <section id="screen-result" class="screen" data-screen="result" hidden>
+      <div class="card card--intro" id="result-body"></div>
+      <div id="ad-slot-result-bottom" class="ad-slot" aria-hidden="true"></div>
+
+      <div class="card card--lead" id="lead-card">
+        <h2 class="card__title">計算結果をあとで見返したい方へ</h2>
+        <p>メールアドレスを登録すると、HAKONIWA LABの新しいツール・お得な情報をお届けします。</p>
+        <form id="lead-form" class="lead-form" action="https://buttondown.com/api/emails/embed-subscribe/hakoniwalab" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/hakoniwalab', 'popupwindow')">
+          <input type="email" name="email" class="lead-form__input" placeholder="メールアドレス" required>
+          <button type="submit" class="btn btn--primary">登録する</button>
+        </form>
+      </div>
+
+      <button type="button" class="btn btn--ghost" id="btn-restart">条件を変えて再計算する</button>
+    </section>
+
+  </main>
+
+  <footer class="app-footer">
+    <p>本サイトは退職金の手取り額の概算把握を目的としており、正確な税額を保証するものではありません。実際の手続き・申告は公式情報・専門家にご確認ください。「PR」表記のあるリンクにはプロモーション(アフィリエイト広告)が含まれます。</p>
+    <p><a href="../privacy.html">プライバシーポリシー</a></p>
+  </footer>
+
+</div>
+
+<script src="js/calculate.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
