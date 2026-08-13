@@ -8,6 +8,7 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6465548593525933" crossorigin="anonymous"></script>
 <link rel="canonical" href="https://hakoniwa-lab.github.io/retirement-simulator/">
 <link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"勤続年数が長いほど税金は安くなりますか？","acceptedAnswer":{"@type":"Answer","text":"はい。退職所得控除は勤続年数に応じて大きくなるため(20年を境に控除の増え方も変わります)、同じ退職金額でも勤続年数が長いほど課税対象額が小さくなり、手取りの割合が高くなる傾向があります。"}},{"@type":"Question","name":"「退職所得の受給に関する申告書」を提出しないとどうなりますか？","acceptedAnswer":{"@type":"Answer","text":"提出しない場合、退職金の20.42%が一律で源泉徴収され、控除が反映されないため税金を多く払いすぎることがあります。その場合は確定申告で還付を受けられます。本シミュレーターは申告書を提出した場合の税額を計算しています。"}},{"@type":"Question","name":"確定拠出年金(iDeCo等)の一時金にも使えますか？","acceptedAnswer":{"@type":"Answer","text":"本シミュレーターは一般的な退職一時金を想定しており、確定拠出年金の一時金や他の退職金との合算調整があるケースには対応していません。正確な金額は税理士にご確認ください。"}},{"@type":"Question","name":"診断結果は保存されますか？","acceptedAnswer":{"@type":"Answer","text":"保存されません。計算のたびにその場で処理しており、入力内容や結果を外部に送信・保存する仕組みは持っていません。"}}]}</script>
 </head>
 <body>
 <div id="app" class="app">
@@ -58,6 +59,48 @@
     </section>
 
   </main>
+
+  <section class="article" aria-labelledby="about-heading">
+    <div class="card card--article">
+      <h2 id="about-heading">退職金手取りシミュレーターとは？</h2>
+      <p>退職金は「退職所得控除」という大きな控除枠があり、他の所得と分離して課税される(分離課税)ため、額面と同じ税率で課税される給与とは税負担の考え方が大きく異なります。勤続年数が長いほど控除額が大きくなる仕組みのため、同じ退職金額でも勤続年数によって手取り額は変わります。本シミュレーターでは、退職金の額面と勤続年数を入力するだけで、退職所得控除を踏まえた手取り額の目安を計算します。</p>
+    </div>
+
+    <div class="card card--article">
+      <h2>計算方法について</h2>
+      <p>退職所得控除額(勤続20年以下は年40万円、20年超は年70万円で計算)を差し引いた金額の2分の1を退職所得として、所得税・住民税を概算しています。一般的な会社員(役員以外)の退職一時金を想定しています。</p>
+      <ul>
+        <li>入力内容はすべてブラウザ内で処理され、サーバーへの送信・保存は行いません</li>
+        <li>確定拠出年金の一時金受取、役員退職金(特定役員退職手当等)、他の退職金との合算調整がある場合は結果が異なります</li>
+        <li>正確な金額は源泉徴収票・退職所得の受給に関する申告書や税理士にご確認ください</li>
+      </ul>
+    </div>
+
+    <div class="card card--article">
+      <h2>よくある質問</h2>
+      <details class="faq-item">
+        <summary>勤続年数が長いほど税金は安くなりますか？</summary>
+        <p>はい。退職所得控除は勤続年数に応じて大きくなるため(20年を境に控除の増え方も変わります)、同じ退職金額でも勤続年数が長いほど課税対象額が小さくなり、手取りの割合が高くなる傾向があります。</p>
+      </details>
+      <details class="faq-item">
+        <summary>「退職所得の受給に関する申告書」を提出しないとどうなりますか？</summary>
+        <p>提出しない場合、退職金の20.42%が一律で源泉徴収され、控除が反映されないため税金を多く払いすぎることがあります。その場合は確定申告で還付を受けられます。本シミュレーターは申告書を提出した場合の税額を計算しています。</p>
+      </details>
+      <details class="faq-item">
+        <summary>確定拠出年金(iDeCo等)の一時金にも使えますか？</summary>
+        <p>本シミュレーターは一般的な退職一時金を想定しており、確定拠出年金の一時金や他の退職金との合算調整があるケースには対応していません。正確な金額は税理士にご確認ください。</p>
+      </details>
+      <details class="faq-item">
+        <summary>診断結果は保存されますか？</summary>
+        <p>保存されません。計算のたびにその場で処理しており、入力内容や結果を外部に送信・保存する仕組みは持っていません。</p>
+      </details>
+    </div>
+
+    <div class="card card--article">
+      <h2>運営者について</h2>
+      <p>本サイトはHAKONIWA LAB(運営者: 灯家)が個人で企画・開発・運営しています。ほかにも退職願・退職届自動作成ツールや保険診断など、退職前後に役立つツールも複数公開しています。</p>
+    </div>
+  </section>
 
   <footer class="app-footer">
     <p>本サイトは退職金の手取り額の概算把握を目的としており、正確な税額を保証するものではありません。実際の手続き・申告は公式情報・専門家にご確認ください。「PR」表記のあるリンクにはプロモーション(アフィリエイト広告)が含まれます。</p>
