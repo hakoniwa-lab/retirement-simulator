@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>退職金の手取りはいくら？計算方法と勤続年数別の早見表</title>
+<meta name="description" content="退職金の手取りは、退職所得控除を引いて残りの半分に課税する3ステップで決まります。勤続年数別の控除額と、退職金2,000万円の手取り早見表を掲載。勤続5年と6年で手取りが82万円変わる仕組みも整理しました。">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6465548593525933" crossorigin="anonymous"></script>
+<link rel="canonical" href="https://hakoniwa-lab.github.io/retirement-simulator/guide/taishokukin-tedori-keisan/">
+<link rel="stylesheet" href="../../css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"退職金の手取りはどう計算しますか？","acceptedAnswer":{"@type":"Answer","text":"3ステップです。まず勤続年数に応じた退職所得控除額を求め、次に退職金からその控除を引いた残りの2分の1を退職所得とします。最後にその退職所得へ所得税（復興特別所得税を含む）と住民税10%がかかります。退職金は給与とは別枠で課税される分離課税のため、給与の税率とは切り離して計算します。"}},{"@type":"Question","name":"退職所得控除はいくらになりますか？","acceptedAnswer":{"@type":"Answer","text":"勤続20年以下は40万円×勤続年数（最低80万円）、20年を超える部分は1年あたり70万円が加算されます。勤続20年で800万円、30年で1,500万円、38年で2,060万円です。勤続年数の端数は切り上げて計算します。"}},{"@type":"Question","name":"退職金に社会保険料はかかりますか？","acceptedAnswer":{"@type":"Answer","text":"退職金は社会保険料の対象外です。給与とは違い、健康保険料や厚生年金保険料は差し引かれません。差し引かれるのは所得税（復興特別所得税を含む）と住民税です。"}},{"@type":"Question","name":"勤続年数が短いと不利になりますか？","acceptedAnswer":{"@type":"Answer","text":"控除額が小さくなるぶん、税負担は大きくなります。さらに勤続5年以下の場合は、控除後の金額が300万円を超える部分について2分の1にする扱いが使えません。退職金1,000万円の例では、勤続5年と6年で手取りが約82万円変わります。"}},{"@type":"Question","name":"「退職所得の受給に関する申告書」を出さないとどうなりますか？","acceptedAnswer":{"@type":"Answer","text":"退職所得控除などが考慮されず、退職手当等の金額に対して20.42%の税率で源泉徴収されます。多くの場合、本来より多く差し引かれることになります。出し忘れても確定申告で精算できます。"}}]}</script>
+<style>
+.guide-nav { max-width: 720px; margin: 0 auto 16px; padding: 0 20px; font-size: 0.85rem; color: var(--color-text-muted); }
+.guide-nav a { color: var(--color-text-muted); }
+.guide-lead { font-size: 0.95rem; }
+.guide-table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.92rem; }
+.guide-table th, .guide-table td { border: 1px solid var(--color-border); padding: 8px 10px; text-align: left; vertical-align: top; }
+.guide-table th { background: var(--color-bg); font-weight: 600; }
+.guide-table td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.guide-note { font-size: 0.85rem; color: var(--color-text-muted); }
+.card--article h3 { font-size: 1rem; margin: 18px 0 6px; }
+.guide-cta { text-align: center; }
+.guide-cta .btn { display: inline-block; text-decoration: none; }
+.guide-calc { background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 8px; padding: 12px 14px; margin: 14px 0; font-size: 0.92rem; }
+.table-scroll { overflow-x: auto; }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <nav class="guide-nav" aria-label="パンくずリスト">
+    <a href="../../index.html">退職金手取りシミュレーター</a> &raquo;
+    <span aria-current="page">退職金の手取り計算</span>
+  </nav>
+
+  <header class="app-header">
+    <p class="app-header__eyebrow">退職金と税金のガイド</p>
+    <h1 class="app-header__title">退職金の手取りは<br class="sp-only">いくら？</h1>
+    <p class="app-header__lead">計算は3ステップです。勤続年数別の早見表と、思ったより引かれない理由をまとめました。</p>
+  </header>
+
+  <main class="main">
+
+    <section class="article">
+
+      <div class="card card--article">
+        <p class="guide-lead">退職金の額面は聞いたけれど、そこからいくら引かれるのか分からない——退職が見えてきたときに気になるところです。給与から2割近く引かれる感覚があるので、退職金も同じくらい持っていかれると身構えている方が多いのですが、<strong>実際にはかなり違います。</strong></p>
+        <ul class="intro-points">
+          <li>退職金の手取りを出す3ステップ</li>
+          <li>勤続年数別の退職所得控除の早見表</li>
+          <li>退職金2,000万円の手取りが勤続年数でどう変わるか</li>
+          <li>勤続5年と6年で82万円変わる仕組み</li>
+        </ul>
+      </div>
+
+      <div class="card card--article">
+        <h2>結論：退職金は給与とは別枠で、勤続年数が長いほど軽くなる</h2>
+        <p>退職金は「退職所得」として、給与とは分けて課税されます（分離課税）。給与の税率がそのまま乗るわけではありません。</p>
+        <p>そして仕組みの中に、税負担を大きく下げる要素が2つ入っています。</p>
+        <ul>
+          <li><strong>退職所得控除</strong> — 勤続年数が長いほど大きくなる控除。これを引いてから課税される</li>
+          <li><strong>2分の1課税</strong> — 控除を引いた残りの、さらに半分だけが課税対象になる</li>
+        </ul>
+        <p>さらに<strong>退職金には社会保険料がかかりません。</strong>給与から引かれている健康保険料・厚生年金保険料は差し引かれません。引かれるのは所得税と住民税だけです。</p>
+      </div>
+
+      <div class="card card--article">
+        <h2>計算は3ステップ</h2>
+
+        <h3>ステップ1：退職所得控除額を出す</h3>
+        <div class="guide-calc">
+          勤続20年以下 → <strong>40万円 × 勤続年数</strong>（最低80万円）<br>
+          勤続20年超 &nbsp;→ <strong>800万円 + 70万円 ×（勤続年数 − 20）</strong>
+        </div>
+        <p>勤続年数の端数は切り上げます。20年3か月なら21年として計算します。実際の金額はこうなります。</p>
+        <table class="guide-table">
+          <thead><tr><th>勤続年数</th><th>退職所得控除額</th></tr></thead>
+          <tbody>
+            <tr><td>5年</td><td class="num">200万円</td></tr>
+            <tr><td>10年</td><td class="num">400万円</td></tr>
+            <tr><td>15年</td><td class="num">600万円</td></tr>
+            <tr><td>20年</td><td class="num">800万円</td></tr>
+            <tr><td>25年</td><td class="num">1,150万円</td></tr>
+            <tr><td>30年</td><td class="num">1,500万円</td></tr>
+            <tr><td>35年</td><td class="num">1,850万円</td></tr>
+            <tr><td>38年</td><td class="num">2,060万円</td></tr>
+          </tbody>
+        </table>
+        <p><strong>退職金がこの控除額に収まっていれば、税金はかかりません。</strong>勤続30年なら1,500万円まで、38年なら2,060万円までが非課税ということになります。</p>
+
+        <h3>ステップ2：残りの半分を出す</h3>
+        <div class="guide-calc">
+          退職所得 ＝ <strong>（退職金 − 退職所得控除）× 1/2</strong>
+        </div>
+        <p>控除を引いた残りが、そのまま課税されるわけではありません。<strong>その半分だけ</strong>が課税対象になります。</p>
+
+        <h3>ステップ3：所得税と住民税をかける</h3>
+        <p>ステップ2で出た退職所得に、所得税（超過累進税率＋復興特別所得税2.1%）と、住民税10%がかかります。住民税は都道府県民税4%と市町村民税6%の合計で、退職所得については一律です。</p>
+      </div>
+
+      <div class="card card--article">
+        <h2>退職金2,000万円の手取り早見表</h2>
+        <p>同じ2,000万円でも、勤続年数によって手取りがどれだけ変わるかを計算しました。</p>
+        <div class="table-scroll">
+          <table class="guide-table">
+            <thead>
+              <tr><th>勤続年数</th><th>退職所得控除</th><th>課税対象</th><th>所得税</th><th>住民税</th><th>手取り</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>10年</td><td class="num">400万円</td><td class="num">800万円</td><td class="num">1,229,284円</td><td class="num">800,000円</td><td class="num">1,797万円</td></tr>
+              <tr><td>20年</td><td class="num">800万円</td><td class="num">600万円</td><td class="num">788,722円</td><td class="num">600,000円</td><td class="num">1,861万円</td></tr>
+              <tr><td>30年</td><td class="num">1,500万円</td><td class="num">250万円</td><td class="num">155,702円</td><td class="num">250,000円</td><td class="num">1,959万円</td></tr>
+              <tr><td>38年</td><td class="num">2,060万円</td><td class="num">0円</td><td class="num">0円</td><td class="num">0円</td><td class="num"><strong>2,000万円</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>勤続10年と38年で、手取りの差は約203万円。</strong>勤続38年なら控除額が額面を上回るため、税金はかかりません。</p>
+        <p>注目したいのは、税負担そのものが軽いことです。額面2,000万円・勤続10年でも引かれるのは約203万円で、割合にすると1割程度です。給与から引かれる感覚とはかなり違います。</p>
+        <p class="guide-note">上記は本サイトのシミュレーターと同じロジックで計算した概算です。実際の金額は、退職金以外の所得の有無、各種控除の適用状況、お住まいの自治体などにより異なります。</p>
+      </div>
+
+      <div class="card card--article">
+        <h2>勤続5年以下だけ、扱いが変わる</h2>
+        <p>ここが見落とされやすいところです。<strong>勤続5年以下の場合、控除を引いた残りが300万円を超える部分には「2分の1」が使えません。</strong>2022年度の改正で入ったルールです。</p>
+        <p>退職金1,000万円で、勤続5年と6年を比べてみます。</p>
+        <div class="table-scroll">
+          <table class="guide-table">
+            <thead>
+              <tr><th>勤続年数</th><th>退職所得控除</th><th>課税対象</th><th>所得税</th><th>住民税</th><th>手取り</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>5年</td><td class="num">200万円</td><td class="num">650万円</td><td class="num">890,822円</td><td class="num">650,000円</td><td class="num">8,459,178円</td></tr>
+              <tr><td>6年</td><td class="num">240万円</td><td class="num">380万円</td><td class="num">339,482円</td><td class="num">380,000円</td><td class="num">9,280,518円</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>1年の差で、手取りが約82万円変わります。</strong>控除額の差（40万円）以上に開くのは、5年以下では2分の1課税が制限されて課税対象が大きくなるためです。</p>
+        <p>短期間で退職金を受け取る予定がある場合は、この線を知っておくと計算が合わないときの原因が分かります。</p>
+      </div>
+
+      <div class="card card--article">
+        <h2>手続きで1つだけ注意すること</h2>
+        <p>ここまでの計算は、<strong>「退職所得の受給に関する申告書」を会社に提出していること</strong>が前提です。</p>
+        <p>これを出していないと退職所得控除が考慮されず、<strong>退職手当等の金額に対して20.42%が源泉徴収されます。</strong>多くの場合、本来より多く差し引かれます。出し忘れても確定申告で精算できますが、手間がかかります。</p>
+        <p>詳しくは <a href="../shinkokusho-dashiwasure/">退職所得の受給に関する申告書の出し忘れ｜確定申告で精算する手順を解説</a> にまとめています。</p>
+      </div>
+
+      <div class="card card--article">
+        <h2>自分の金額で計算する</h2>
+        <p>額面と勤続年数を入れると、上記と同じ計算で手取りの目安が出ます。無料・登録不要で、入力内容は端末の中だけで処理されます。</p>
+        <p class="guide-cta"><a class="btn btn--primary btn--large" href="../../index.html">退職金の手取りを計算する</a></p>
+        <p class="guide-note" style="text-align:center;">入力した金額はサーバーへ送信・保存されません。</p>
+      </div>
+
+      <div class="card card--article">
+        <h2>よくある質問</h2>
+        <details class="faq-item">
+          <summary>退職金の手取りはどう計算しますか？</summary>
+          <p>3ステップです。まず勤続年数に応じた退職所得控除額を求め、次に退職金からその控除を引いた残りの2分の1を退職所得とします。最後にその退職所得へ所得税（復興特別所得税を含む）と住民税10%がかかります。退職金は給与とは別枠で課税される分離課税のため、給与の税率とは切り離して計算します。</p>
+        </details>
+        <details class="faq-item">
+          <summary>退職所得控除はいくらになりますか？</summary>
+          <p>勤続20年以下は40万円×勤続年数（最低80万円）、20年を超える部分は1年あたり70万円が加算されます。勤続20年で800万円、30年で1,500万円、38年で2,060万円です。勤続年数の端数は切り上げて計算します。</p>
+        </details>
+        <details class="faq-item">
+          <summary>退職金に社会保険料はかかりますか？</summary>
+          <p>退職金は社会保険料の対象外です。給与とは違い、健康保険料や厚生年金保険料は差し引かれません。差し引かれるのは所得税（復興特別所得税を含む）と住民税です。</p>
+        </details>
+        <details class="faq-item">
+          <summary>勤続年数が短いと不利になりますか？</summary>
+          <p>控除額が小さくなるぶん、税負担は大きくなります。さらに勤続5年以下の場合は、控除後の金額が300万円を超える部分について2分の1にする扱いが使えません。退職金1,000万円の例では、勤続5年と6年で手取りが約82万円変わります。</p>
+        </details>
+        <details class="faq-item">
+          <summary>「退職所得の受給に関する申告書」を出さないとどうなりますか？</summary>
+          <p>退職所得控除などが考慮されず、退職手当等の金額に対して20.42%の税率で源泉徴収されます。多くの場合、本来より多く差し引かれることになります。出し忘れても確定申告で精算できます。</p>
+        </details>
+      </div>
+
+      <div class="card card--article">
+        <h2>まとめ</h2>
+        <ul>
+          <li>退職金は給与と分けて課税される（分離課税）。<strong>社会保険料はかからない</strong></li>
+          <li>計算は3ステップ。控除を引く → 残りの半分にする → 所得税と住民税をかける</li>
+          <li>退職所得控除は勤続20年以下が40万円×年数、20年超は800万円＋70万円×超過年数</li>
+          <li>勤続30年なら1,500万円、38年なら2,060万円までは税金がかからない</li>
+          <li>額面2,000万円・勤続10年でも引かれるのは約203万円（1割程度）</li>
+          <li><strong>勤続5年以下だけ2分の1課税が制限される。</strong>5年と6年で手取りが約82万円違う</li>
+          <li>「退職所得の受給に関する申告書」を出していないと20.42%が源泉徴収される</li>
+        </ul>
+      </div>
+
+      <div class="card card--article">
+        <h2>あわせて読みたい</h2>
+        <ul>
+          <li><a href="../shinkokusho-dashiwasure/">退職所得の受給に関する申告書の出し忘れ｜確定申告で精算する手順を解説</a></li>
+        </ul>
+      </div>
+
+      <div class="card card--article">
+        <h2>退職の前後に確認しておきたいこと</h2>
+        <ul>
+          <li><a href="../../../resignation-letter-generator/">退職願・退職届 自動作成ツール</a> — 必要事項を入力するだけで一般的な書式の文面が作れます</li>
+          <li><a href="../../../subsidy-checker/">給付金・補助金診断</a> — 退職後に使える可能性のある給付金を5問で確認できます</li>
+          <li><a href="../../../takehome-calculator/">手取り年収シミュレーター</a> — 再就職後の額面から手取りの目安を計算できます</li>
+        </ul>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="app-footer">
+    <p>本記事は退職金にかかる税金の一般的な仕組みを整理したものであり、個別の税額を保証するものではありません。実際の金額は退職金以外の所得や各種控除の適用状況により異なります。正確な金額は退職所得の源泉徴収票をご確認いただくか、所轄の税務署・税理士にご相談ください。「PR」表記のあるリンクにはプロモーション(アフィリエイト広告)が含まれます。</p>
+    <p><a href="../../../privacy.html">プライバシーポリシー</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
