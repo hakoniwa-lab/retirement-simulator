@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hakoniwa-lab.github.io/retirement-simulator/sitemap.xml
+Sitemap: https://hakoniwalab.com/retirement-simulator/sitemap.xml
