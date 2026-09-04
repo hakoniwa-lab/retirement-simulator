@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>役員退職金の計算シミュレーション｜功績倍率法の相場と手取りまでの流れ</title>
+<meta name="description" content="役員退職金の計算は「最終報酬月額×在任年数×功績倍率」の功績倍率法が一般的です。功績倍率の一般的な目安、会社側の損金算入の考え方、受け取る側の税金で在任5年以下が不利になる仕組み、手取りまでの流れを整理しました。">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6465548593525933" crossorigin="anonymous"></script>
+<link rel="canonical" href="https://hakoniwalab.com/retirement-simulator/guide/yakuin-taishokukin-keisan/">
+<link rel="stylesheet" href="../../css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"役員退職金はどうやって計算しますか？","acceptedAnswer":{"@type":"Answer","text":"一般的なのは功績倍率法で、最終報酬月額×役員在任年数×功績倍率で計算します。功績倍率は役位によって変え、社長が最も高く設定されるのが通例です。法律で定められた計算式ではなく、会社が役員退職金規程などで定めます。"}},{"@type":"Question","name":"功績倍率はどのくらいが目安ですか？","acceptedAnswer":{"@type":"Answer","text":"実務では社長3.0倍前後、専務・常務2.0〜2.5倍前後、平取締役1.5倍前後といった数字が目安として引用されることが多いですが、法令で決まった基準ではありません。国税庁の考え方は同業種・同規模の法人と比較して不相当に高額かどうかを見るもので、その数字を超えると会社側で損金として認められない部分が出る可能性があります。"}},{"@type":"Question","name":"受け取る側の税金は従業員の退職金と同じですか？","acceptedAnswer":{"@type":"Answer","text":"基本は同じ退職所得ですが、役員等としての勤続年数が5年以下の場合は特定役員退職手当等となり、退職所得控除を引いた残額を2分の1にする計算が使えません。在任期間が短い役員は、同じ額面でも税負担が重くなります。"}},{"@type":"Question","name":"役員退職金の手取りはいくらになりますか？","acceptedAnswer":{"@type":"Answer","text":"額面から退職所得控除を引き、在任5年超なら2分の1にした金額に所得税・住民税がかかります。控除額は勤続年数で決まるため、同じ額面でも人によって手取りが変わります。退職所得の受給に関する申告書を提出していないと20.42％で源泉徴収されるため、書類の提出も手取りに影響します。"}}]}</script>
+<style>
+.guide-nav { max-width: 720px; margin: 0 auto 16px; padding: 0 20px; font-size: 0.85rem; color: var(--color-text-muted); }
+.guide-nav a { color: var(--color-text-muted); }
+.guide-lead { font-size: 0.95rem; }
+.guide-table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.92rem; }
+.guide-table th, .guide-table td { border: 1px solid var(--color-border); padding: 8px 10px; text-align: left; vertical-align: top; }
+.guide-table th { background: var(--color-bg); font-weight: 600; }
+.guide-note { font-size: 0.85rem; color: var(--color-text-muted); }
+.card--article h3 { font-size: 1rem; margin: 18px 0 6px; }
+.guide-cta { text-align: center; }
+.guide-cta .btn { display: inline-block; text-decoration: none; }
+.guide-calc { background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 8px; padding: 12px 14px; margin: 14px 0; font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <nav class="guide-nav" aria-label="パンくずリスト">
+    <a href="../../index.html">退職金手取りシミュレーター</a> &raquo;
+    <span aria-current="page">役員退職金の計算</span>
+  </nav>
+
+  <header class="app-header">
+    <p class="app-header__eyebrow">退職金と税金のガイド</p>
+    <h1 class="app-header__title">役員退職金の<br class="sp-only">計算シミュレーション</h1>
+    <p class="app-header__lead">功績倍率法の式、倍率の目安、会社側と受け取る側それぞれの税金の考え方、手取りまでを一本の流れで整理しました。</p>
+  </header>
+
+  <main class="main">
+
+    <section class="article">
+
+      <div class="card card--article">
+        <p class="guide-lead">従業員の退職金は就業規則や退職金規程で額が決まりますが、<strong>役員退職金には法律上の計算式がありません。</strong>会社が決めた式で計算し、その額が税務上「相当」かどうかを問われる、という二段構えになっています。この記事では、実務でいちばん使われている計算方法から、受け取る側の手取りまでを順に追います。</p>
+        <ul class="intro-points">
+          <li>功績倍率法の計算式と、役位ごとの倍率の目安</li>
+          <li>会社側で「損金」として認められる範囲の考え方</li>
+          <li>受け取る側の税金で、在任5年以下が不利になる仕組み</li>
+          <li>額面から手取りまでの流れ</li>
+        </ul>
+      </div>
+
+      <div class="card card--article">
+        <h2>結論：計算式は「最終報酬月額 × 在任年数 × 功績倍率」</h2>
+        <p>役員退職金の計算でいちばん一般的なのが<strong>功績倍率法</strong>です。</p>
+        <div class="guide-calc">
+          役員退職金 ＝ 最終報酬月額 × 役員在任年数 × 功績倍率
+        </div>
+        <p>たとえば、退任時の役員報酬が月80万円、取締役としての在任が15年、功績倍率が2.0倍なら、80万円 × 15年 × 2.0 ＝ <strong>2,400万円</strong>です。</p>
+        <p>この式は法律で決まっているものではなく、<strong>会社が役員退職金規程などで定めて使う</strong>ものです。ただ、税務署や裁判所が役員退職金の「相当額」を検討するときにもこの式が使われてきたため、実務上の標準になっています。</p>
+        <p class="guide-note">出典：国税庁 税務大学校「役員退職給与の適正額の算定方法についての一考察」<a href="https://www.nta.go.jp/about/organization/ntc/kenkyu/ronsou/86/04/index.htm" target="_blank" rel="noopener">https://www.nta.go.jp/about/organization/ntc/kenkyu/ronsou/86/04/index.htm</a></p>
+      </div>
+
+      <div class="card card--article">
+        <h2>功績倍率の目安 ― ただし「相場」は法律ではない</h2>
+        <p>功績倍率は役位によって変えるのが通例で、実務では次のような数字が目安として引用されることが多いです。</p>
+        <table class="guide-table">
+          <thead>
+            <tr><th>役位</th><th>よく引用される功績倍率の目安</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>社長</td><td>3.0倍前後</td></tr>
+            <tr><td>専務・常務</td><td>2.0〜2.5倍前後</td></tr>
+            <tr><td>平取締役</td><td>1.5倍前後</td></tr>
+            <tr><td>監査役</td><td>1.0〜1.5倍前後</td></tr>
+          </tbody>
+        </table>
+        <p>ここで押さえておきたいのは、<strong>これらは法令で定められた基準ではない</strong>という点です。過去の裁判で示された数字や実務の慣行が「目安」として広まっているだけで、この倍率なら必ず認められるという保証はありません。</p>
+        <p>国税庁の考え方は、<strong>同業種・同規模の法人の役員退職金と比較して不相当に高額かどうか</strong>を見る、というものです。そのため会社の業種や規模、本人の在任期間や功績によって、妥当な倍率は変わります。</p>
+      </div>
+
+      <div class="card card--article">
+        <h2>会社側の税金 ― 損金として認められる範囲</h2>
+        <p>会社が役員退職金を支払うと、原則としてその額は<strong>損金（経費）</strong>になります。ただし、支払った額のうち「不相当に高額な部分」は損金に算入できません。</p>
+        <p>法人税法上、役員退職給与の額が相当かどうかは、次のような要素で判断されます。</p>
+        <ul>
+          <li>その役員の業務に従事した期間</li>
+          <li>退職の事情</li>
+          <li>同業種・同規模の法人における役員退職給与の支給状況</li>
+        </ul>
+        <p>つまり、<strong>功績倍率を高く設定して退職金を大きくしても、税務上は「相当な額」を超える部分が否認される</strong>可能性があります。役員退職金規程を整え、株主総会の決議を経て、同業他社との比較で説明できる水準にしておく、というのが実務の基本です。</p>
+        <p class="guide-note">出典：国税庁 法人税基本通達 第9章 第2節 第7款「退職給与」<a href="https://www.nta.go.jp/law/tsutatsu/kihon/hojin/09/09_02_07.htm" target="_blank" rel="noopener">https://www.nta.go.jp/law/tsutatsu/kihon/hojin/09/09_02_07.htm</a>／個別の判断は税理士にご確認ください。</p>
+      </div>
+
+      <div class="card card--article">
+        <h2>受け取る側の税金 ― 「在任5年以下」の壁</h2>
+        <p>受け取った役員退職金は、従業員の退職金と同じく<strong>退職所得</strong>として課税されます。基本の計算はこうです。</p>
+        <div class="guide-calc">
+          退職所得の金額 ＝（収入金額 − 退職所得控除額）× 1/2
+        </div>
+        <p>ただし、役員には<strong>大きな例外</strong>があります。</p>
+        <p>役員等としての勤続年数が<strong>5年以下</strong>の場合、その退職金は「<strong>特定役員退職手当等</strong>」に該当し、<strong>控除後の金額を2分の1にする計算が使えません。</strong>平成24年の税制改正で設けられた仕組みです。</p>
+        <table class="guide-table">
+          <thead>
+            <tr><th>役員在任期間</th><th>課税対象</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>5年超</td><td>（収入金額 − 退職所得控除額）× <strong>1/2</strong></td></tr>
+            <tr><td><strong>5年以下</strong></td><td>（収入金額 − 退職所得控除額）　← <strong>2分の1にならない</strong></td></tr>
+          </tbody>
+        </table>
+        <p>同じ2,400万円でも、在任5年超と5年以下では課税対象が倍近く変わります。<strong>退任のタイミングが手取りに直結する</strong>ので、役員になって間もない方は特に確認が必要な部分です。</p>
+        <p class="guide-note">出典：国税庁「退職所得の源泉徴収事務」（特定役員退職手当等の説明を含む）<a href="https://www.nta.go.jp/publication/pamph/gensen/nencho2025/pdf/0021009-037_03.pdf" target="_blank" rel="noopener">https://www.nta.go.jp/publication/pamph/gensen/nencho2025/pdf/0021009-037_03.pdf</a>／「No.1420 退職金を受け取ったとき」<a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1420.htm" target="_blank" rel="noopener">https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1420.htm</a></p>
+      </div>
+
+      <div class="card card--article">
+        <h2>手取りまでの流れ</h2>
+        <p>ここまでを通しでまとめると、役員退職金は次の順番で決まります。</p>
+        <ul>
+          <li><strong>1. 額面を決める</strong> — 最終報酬月額 × 在任年数 × 功績倍率（会社の規程と株主総会決議による）</li>
+          <li><strong>2. 会社側で損金算入の可否を確認する</strong> — 同業種・同規模との比較で不相当に高額でないか</li>
+          <li><strong>3. 退職所得控除を計算する</strong> — 勤続年数で決まる（20年以下は年40万円、20年超の部分は年70万円）</li>
+          <li><strong>4. 在任5年超なら2分の1にする</strong> — 5年以下は2分の1にならない</li>
+          <li><strong>5. 所得税・住民税を差し引く</strong> — 分離課税。「退職所得の受給に関する申告書」を提出していれば控除を反映した額で源泉徴収される</li>
+        </ul>
+        <p>5番目の申告書は見落とされやすい書類です。提出していないと退職金の額に対して一律20.42％が源泉徴収され、確定申告で精算することになります。詳しくはこちらにまとめています。</p>
+        <ul>
+          <li><a href="../shinkokusho-dashiwasure/">退職所得の受給に関する申告書の出し忘れ｜確定申告で精算する手順を解説</a></li>
+        </ul>
+        <p class="guide-note">3〜5の計算は<a href="../../index.html">退職金手取りシミュレーター</a>で目安を出せます。ただし本シミュレーターは一般的な退職一時金を想定しており、<strong>在任5年以下の特定役員退職手当等には対応していません</strong>。その場合は2分の1をしない前提で読み替えるか、税理士にご確認ください。</p>
+      </div>
+
+      <div class="card card--article">
+        <h2>よくある質問</h2>
+        <details class="faq-item">
+          <summary>役員退職金はどうやって計算しますか？</summary>
+          <p>一般的なのは功績倍率法で、最終報酬月額×役員在任年数×功績倍率で計算します。功績倍率は役位によって変え、社長が最も高く設定されるのが通例です。法律で定められた計算式ではなく、会社が役員退職金規程などで定めます。</p>
+        </details>
+        <details class="faq-item">
+          <summary>功績倍率はどのくらいが目安ですか？</summary>
+          <p>実務では社長3.0倍前後、専務・常務2.0〜2.5倍前後、平取締役1.5倍前後といった数字が目安として引用されることが多いですが、法令で決まった基準ではありません。国税庁の考え方は同業種・同規模の法人と比較して不相当に高額かどうかを見るもので、その数字を超えると会社側で損金として認められない部分が出る可能性があります。</p>
+        </details>
+        <details class="faq-item">
+          <summary>受け取る側の税金は従業員の退職金と同じですか？</summary>
+          <p>基本は同じ退職所得ですが、役員等としての勤続年数が5年以下の場合は特定役員退職手当等となり、退職所得控除を引いた残額を2分の1にする計算が使えません。在任期間が短い役員は、同じ額面でも税負担が重くなります。</p>
+        </details>
+        <details class="faq-item">
+          <summary>役員退職金の手取りはいくらになりますか？</summary>
+          <p>額面から退職所得控除を引き、在任5年超なら2分の1にした金額に所得税・住民税がかかります。控除額は勤続年数で決まるため、同じ額面でも人によって手取りが変わります。退職所得の受給に関する申告書を提出していないと20.42％で源泉徴収されるため、書類の提出も手取りに影響します。</p>
+        </details>
+      </div>
+
+      <div class="card card--article">
+        <h2>まとめ</h2>
+        <ul>
+          <li>役員退職金に法律上の計算式はない。会社の規程で決め、税務上の相当性を問われる</li>
+          <li>実務の標準は功績倍率法：最終報酬月額 × 在任年数 × 功績倍率</li>
+          <li>功績倍率の目安は社長3.0・専務常務2.0〜2.5・平取締役1.5前後。ただし法令の基準ではない</li>
+          <li>会社側は「不相当に高額な部分」が損金にならない。同業種・同規模との比較で判断される</li>
+          <li>受け取る側は退職所得。控除を引いて2分の1にするのが基本</li>
+          <li><strong>役員在任5年以下は「特定役員退職手当等」で、2分の1にならない</strong></li>
+          <li>退任のタイミングが手取りに直結する</li>
+          <li>「退職所得の受給に関する申告書」を出さないと20.42％で源泉徴収される</li>
+        </ul>
+        <p>額面が決まったら、まず手取りの目安を出してみてください。</p>
+        <p class="guide-cta"><a class="btn btn--primary btn--large" href="../../index.html">退職金手取りシミュレーターを使う</a></p>
+        <p class="guide-note" style="text-align:center;">無料・登録不要。入力した内容は端末の中だけで処理され、外部への送信・保存は行いません。</p>
+      </div>
+
+      <div class="card card--article">
+        <h2>あわせて読みたい</h2>
+        <ul>
+          <li><a href="../taishokukin-tedori-keisan/">退職金の手取りはいくら？計算方法と目安</a></li>
+          <li><a href="../shinkokusho-dashiwasure/">退職所得の受給に関する申告書の出し忘れ｜確定申告で精算する手順を解説</a></li>
+        </ul>
+      </div>
+
+      <div class="card card--article">
+        <h2>あわせて確認しておきたいこと</h2>
+        <ul>
+          <li><a href="../../../takehome-calculator/">手取り年収シミュレーター</a> — 退任後の家計の見通しに</li>
+          <li><a href="../../../subsidy-checker/">給付金・補助金診断</a> — 退任後に使える可能性のある制度の確認に</li>
+        </ul>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="app-footer">
+    <p>本記事は国税庁が公表している通達・資料および実務上一般的とされる計算方法を整理したものであり、個別の役員退職金の妥当性、損金算入の可否、税額を判断するものではありません。功績倍率の数値は法令上の基準ではなく、業種・規模・個別事情によって妥当な水準は異なります。実際の設計・申告については税理士にご確認ください。本サイトは税務相談を行うものではありません。「PR」表記のあるリンクにはプロモーション(アフィリエイト広告)が含まれます。</p>
+    <p><a href="../../../privacy.html">プライバシーポリシー</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
