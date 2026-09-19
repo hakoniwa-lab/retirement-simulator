@@ -20,6 +20,7 @@ const btnRestart = document.getElementById("btn-restart");
 
 function buildCrossLinkBanners() {
   const banners = [
+    { href: "ideco/", text: "iDeCoの一時金も受け取るなら、受け取り順で税金を比べる →" },
     { href: "../takehome-calculator/", text: "在職中の手取り年収も計算してみる →" },
     { href: "../insurance-checker/", text: "退職後の保障を保険診断で確認する →" },
     { href: "../career-checker/", text: "転職・再就職を考えるなら転職エージェント診断へ →" },

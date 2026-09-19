@@ -520,6 +520,7 @@ html, body {
   margin: 0 0 12px;
 }
 .card--article p:last-child { margin-bottom: 0; }
+.card--article a { overflow-wrap: anywhere; }
 .card--article ul {
   font-size: 0.9rem;
   margin: 0 0 12px;

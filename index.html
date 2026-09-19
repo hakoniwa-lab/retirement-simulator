@@ -8,7 +8,7 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6465548593525933" crossorigin="anonymous"></script>
 <link rel="canonical" href="https://hakoniwalab.com/retirement-simulator/">
 <link rel="stylesheet" href="css/style.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"勤続年数が長いほど税金は安くなりますか？","acceptedAnswer":{"@type":"Answer","text":"はい。退職所得控除は勤続年数に応じて大きくなるため(20年を境に控除の増え方も変わります)、同じ退職金額でも勤続年数が長いほど課税対象額が小さくなり、手取りの割合が高くなる傾向があります。"}},{"@type":"Question","name":"「退職所得の受給に関する申告書」を提出しないとどうなりますか？","acceptedAnswer":{"@type":"Answer","text":"提出しない場合、退職金の20.42%が一律で源泉徴収され、控除が反映されないため税金を多く払いすぎることがあります。その場合は確定申告で還付を受けられます。本シミュレーターは申告書を提出した場合の税額を計算しています。"}},{"@type":"Question","name":"確定拠出年金(iDeCo等)の一時金にも使えますか？","acceptedAnswer":{"@type":"Answer","text":"本シミュレーターは一般的な退職一時金を想定しており、確定拠出年金の一時金や他の退職金との合算調整があるケースには対応していません。正確な金額は税理士にご確認ください。"}},{"@type":"Question","name":"診断結果は保存されますか？","acceptedAnswer":{"@type":"Answer","text":"保存されません。計算のたびにその場で処理しており、入力内容や結果を外部に送信・保存する仕組みは持っていません。"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"勤続年数が長いほど税金は安くなりますか？","acceptedAnswer":{"@type":"Answer","text":"はい。退職所得控除は勤続年数に応じて大きくなるため(20年を境に控除の増え方も変わります)、同じ退職金額でも勤続年数が長いほど課税対象額が小さくなり、手取りの割合が高くなる傾向があります。"}},{"@type":"Question","name":"「退職所得の受給に関する申告書」を提出しないとどうなりますか？","acceptedAnswer":{"@type":"Answer","text":"提出しない場合、退職金の20.42%が一律で源泉徴収され、控除が反映されないため税金を多く払いすぎることがあります。その場合は確定申告で還付を受けられます。本シミュレーターは申告書を提出した場合の税額を計算しています。"}},{"@type":"Question","name":"確定拠出年金(iDeCo等)の一時金にも使えますか？","acceptedAnswer":{"@type":"Answer","text":"本シミュレーターは退職金だけの手取りを計算します。iDeCoの一時金と退職金の両方を受け取る場合は、受け取る順番と間隔で退職所得控除が調整されるため、iDeCoと退職金の受け取り順シミュレーターで、受け取る年齢ごとの税額を比べてください。"}},{"@type":"Question","name":"診断結果は保存されますか？","acceptedAnswer":{"@type":"Answer","text":"保存されません。計算のたびにその場で処理しており、入力内容や結果を外部に送信・保存する仕組みは持っていません。"}}]}</script>
 </head>
 <body>
 <div id="app" class="app">
@@ -39,6 +39,7 @@
         </form>
         <p class="intro-disclaimer">※ 本シミュレーターは一般的な会社員(役員以外)の退職一時金を想定した概算です。確定拠出年金の一時金受取や、役員退職金(特定役員退職手当等)、他の退職金との合算調整がある場合は計算結果が異なります。正確な金額は源泉徴収票・退職所得の受給に関する申告書や税理士にご確認ください。</p>
       </div>
+      <a class="cross-link-banner" href="ideco/">iDeCoの一時金も受け取る方は、受け取り順で税金を比べる →</a>
     </section>
 
     <!-- result screen -->
@@ -71,7 +72,7 @@
       <p>退職所得控除額(勤続20年以下は年40万円、20年超は年70万円で計算)を差し引いた金額の2分の1を退職所得として、所得税・住民税を概算しています。一般的な会社員(役員以外)の退職一時金を想定しています。</p>
       <ul>
         <li>入力内容はすべてブラウザ内で処理され、サーバーへの送信・保存は行いません</li>
-        <li>確定拠出年金の一時金受取、役員退職金(特定役員退職手当等)、他の退職金との合算調整がある場合は結果が異なります</li>
+        <li>確定拠出年金の一時金受取、役員退職金(特定役員退職手当等)、他の退職金との合算調整がある場合は結果が異なります(iDeCoの一時金との受け取り順は<a href="ideco/">受け取り順シミュレーター</a>で比べられます)</li>
         <li>正確な金額は源泉徴収票・退職所得の受給に関する申告書や税理士にご確認ください</li>
       </ul>
     </div>
@@ -100,7 +101,7 @@
       </details>
       <details class="faq-item">
         <summary>確定拠出年金(iDeCo等)の一時金にも使えますか？</summary>
-        <p>本シミュレーターは一般的な退職一時金を想定しており、確定拠出年金の一時金や他の退職金との合算調整があるケースには対応していません。正確な金額は税理士にご確認ください。</p>
+        <p>本シミュレーターは退職金だけの手取りを計算します。iDeCoの一時金と退職金の両方を受け取る場合は、受け取る順番と間隔で退職所得控除が調整されるため、<a href="ideco/">iDeCoと退職金の受け取り順シミュレーター</a>で、受け取る年齢ごとの税額を比べてください。</p>
       </details>
       <details class="faq-item">
         <summary>診断結果は保存されますか？</summary>
@@ -115,7 +116,9 @@
         <li><a href="guide/taishokukin-tedori-keisan/">退職金の手取りはいくら？計算方法と勤続年数別の早見表</a></li>
         <li><a href="guide/shinkokusho-dashiwasure/">退職所得の受給に関する申告書の出し忘れ｜確定申告で精算する手順を解説</a></li>
         <li><a href="guide/yakuin-taishokukin-keisan/">役員退職金の計算シミュレーション｜功績倍率法の相場と手取りまでの流れ</a></li>
+        <li><a href="guide/ideco-10nen-rule/">iDeCoの10年ルールとは？退職金との受け取り順を比較表で解説</a></li>
       </ul>
+      <p>iDeCoの一時金も受け取る方は、<a href="ideco/">iDeCoと退職金の受け取り順シミュレーター</a>で、受け取る年齢ごとの税金を比べられます。</p>
     </div>
 
     <div class="card card--article">

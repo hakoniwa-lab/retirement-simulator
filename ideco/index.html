@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iDeCoと退職金の受け取り順シミュレーター｜10年ルール対応</title>
+<meta name="description" content="iDeCoの一時金を何歳で受け取ると、退職金と合わせた税金が少なくなるかを比較表で表示します。2026年からの10年ルール、退職金が先の19年ルール、同じ年にまとめる場合まで、受け取る年齢ごとに所得税・住民税の合計を計算します。">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6465548593525933" crossorigin="anonymous"></script>
+<link rel="canonical" href="https://hakoniwalab.com/retirement-simulator/ideco/">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"iDeCoの10年ルールとは何ですか？","acceptedAnswer":{"@type":"Answer","text":"iDeCoなど確定拠出年金の一時金を受け取った年の翌年から9年以内に退職金を受け取ると、退職金の退職所得控除から、期間が重なっている年数ぶんの控除が差し引かれるルールです。2026年1月1日以後に受け取る一時金から対象になりました。それまでは4年以内(いわゆる5年ルール)でした。"}},{"@type":"Question","name":"iDeCoと退職金はどちらを先に受け取るのがいいですか？","acceptedAnswer":{"@type":"Answer","text":"金額と期間の重なり方で変わります。退職金を先に受け取ると、その後19年以内に受け取るiDeCoの控除が大きく減りやすくなります。iDeCoを先に受け取る場合や同じ年にまとめる場合は、iDeCoの一時金が自分の控除枠より小さいと差がつきにくくなります。このシミュレーターで、自分の金額を入れて比べてください。"}},{"@type":"Question","name":"iDeCoを先に受け取ると、退職金の控除はどれくらい減りますか？","acceptedAnswer":{"@type":"Answer","text":"原則は、iDeCoの掛金期間と勤続期間が重なっている年数ぶんの控除額です(重なり20年なら800万円)。ただしiDeCoの一時金が、iDeCo自身の退職所得控除額より少ない場合は、重なりを「一時金÷40万円」年に短くして計算します。一時金600万円なら15年ぶん、減るのは最大600万円です。"}},{"@type":"Question","name":"iDeCoを60歳から受け取れないことはありますか？","acceptedAnswer":{"@type":"Answer","text":"あります。60歳時点の通算加入者等期間が10年未満の場合、受け取り開始は61〜65歳に遅れます。60歳以上で初めて加入した場合は、加入から5年を過ぎてからです。受け取りは75歳までに始める必要があります。"}},{"@type":"Question","name":"入力内容は保存されますか？","acceptedAnswer":{"@type":"Answer","text":"保存されません。計算はブラウザの中で行い、入力した金額をサーバーへ送信・保存する仕組みは持っていません。"}}]}</script>
+<style>
+.guide-nav { margin: 0 auto 16px; font-size: 0.85rem; color: var(--color-text-muted); }
+.guide-nav a { color: var(--color-text-muted); }
+.form-grid { display: grid; gap: 0 14px; grid-template-columns: 1fr; }
+@media (min-width: 560px) { .form-grid { grid-template-columns: 1fr 1fr; } }
+.form-group-title { text-align: left; font-weight: 800; font-size: 0.95rem; margin: 4px 0 10px; color: var(--color-primary); }
+.form-hint { display: block; font-weight: 400; font-size: 0.75rem; color: var(--color-text-muted); margin-top: 4px; }
+.input-unit { display: flex; align-items: center; gap: 8px; }
+.input-unit span { font-size: 0.9rem; white-space: nowrap; }
+.form-error { color: var(--color-warn-text); background: var(--color-warn-bg); border-radius: var(--radius-sm); padding: 8px 12px; font-size: 0.85rem; text-align: left; }
+.result-headline__value--text { font-size: 1.5rem; line-height: 1.4; }
+.result-compare { font-size: 0.92rem; text-align: left; margin: 0 0 14px; }
+.compare-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; text-align: left; }
+.compare-table th, .compare-table td { border-bottom: 1px solid var(--color-border); padding: 10px 6px; vertical-align: top; }
+.compare-table th { font-size: 0.78rem; color: var(--color-text-muted); font-weight: 700; }
+.compare-table .num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; font-weight: 700; }
+.compare-table td.num .badge, .compare-diff { display: block; width: fit-content; margin: 6px 0 0 auto; }
+.compare-diff { font-size: 0.78rem; color: var(--color-warn-text); }
+.compare-table tr.is-best td { background: var(--color-badge-bg); }
+.compare-age { display: block; font-weight: 800; font-size: 0.98rem; }
+.compare-order { display: block; font-size: 0.82rem; }
+.compare-note { display: block; font-size: 0.75rem; color: var(--color-text-muted); }
+.breakdown-title { font-weight: 800; font-size: 0.9rem; text-align: left; margin: 20px 0 6px; }
+.result-row--head span { color: var(--color-text) !important; font-weight: 800; }
+.guide-note { font-size: 0.8rem; color: var(--color-text-muted); text-align: left; }
+.guide-table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.88rem; }
+.guide-table th, .guide-table td { border: 1px solid var(--color-border); padding: 8px 10px; text-align: left; vertical-align: top; }
+.guide-table th { background: var(--color-bg); font-weight: 600; }
+.guide-table td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.guide-calc { background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 8px; padding: 12px 14px; margin: 14px 0; font-size: 0.9rem; }
+.card--article h3 { font-size: 0.98rem; margin: 18px 0 6px; }
+.table-scroll { overflow-x: auto; }
+</style>
+</head>
+<body>
+<div id="app" class="app">
+
+  <nav class="guide-nav" aria-label="パンくずリスト">
+    <a href="../">退職金手取りシミュレーター</a> &raquo;
+    <span aria-current="page">iDeCoと退職金の受け取り順</span>
+  </nav>
+
+  <header class="app-header">
+    <p class="app-header__eyebrow">受け取り順の比較表</p>
+    <h1 class="app-header__title">iDeCoと退職金の<br class="sp-only">受け取り順シミュレーター</h1>
+    <p class="app-header__lead">iDeCoの一時金を何歳で受け取ると、退職金と合わせた税金が少なくなるか。受け取る年齢ごとの税額を比較表にします。2026年からの10年ルールに対応しています。</p>
+  </header>
+
+  <main id="main" class="main">
+
+    <section id="screen-intro" class="screen" data-screen="intro">
+      <div class="card card--intro">
+        <form id="ideco-form" novalidate>
+          <p class="form-group-title">退職金</p>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="pay_amount">退職金の額面（見込み）</label>
+              <div class="input-unit"><input type="number" id="pay_amount" name="pay_amount" class="quiz-select" placeholder="例: 2000" min="1" step="1" inputmode="numeric" required><span>万円</span></div>
+            </div>
+            <div class="form-field">
+              <label for="pay_years">勤続年数</label>
+              <div class="input-unit"><input type="number" id="pay_years" name="pay_years" class="quiz-select" placeholder="例: 38" min="1" max="60" step="1" inputmode="numeric" required><span>年</span></div>
+            </div>
+            <div class="form-field">
+              <label for="pay_age">退職金を受け取る年齢</label>
+              <div class="input-unit"><input type="number" id="pay_age" name="pay_age" class="quiz-select" value="60" min="40" max="75" step="1" inputmode="numeric" required><span>歳</span></div>
+              <span class="form-hint">定年後に再雇用されて65歳で受け取るなら65</span>
+            </div>
+          </div>
+
+          <p class="form-group-title">iDeCo</p>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="ideco_amount">iDeCoの一時金（見込み）</label>
+              <div class="input-unit"><input type="number" id="ideco_amount" name="ideco_amount" class="quiz-select" placeholder="例: 600" min="1" step="1" inputmode="numeric" required><span>万円</span></div>
+              <span class="form-hint">残高の見込みでかまいません</span>
+            </div>
+            <div class="form-field">
+              <label for="ideco_years">掛金を出した年数</label>
+              <div class="input-unit"><input type="number" id="ideco_years" name="ideco_years" class="quiz-select" placeholder="例: 20" min="1" max="50" step="1" inputmode="numeric" required><span>年</span></div>
+              <span class="form-hint">掛金を止めていた期間は数えません</span>
+            </div>
+            <div class="form-field">
+              <label for="ideco_end_age">掛金を出し終える年齢</label>
+              <div class="input-unit"><input type="number" id="ideco_end_age" name="ideco_end_age" class="quiz-select" value="60" min="21" max="70" step="1" inputmode="numeric" required><span>歳</span></div>
+              <span class="form-hint">2027年からは70歳になるまで出せます</span>
+            </div>
+          </div>
+
+          <p id="form-error" class="form-error" role="alert" hidden></p>
+          <button type="submit" class="btn btn--primary btn--large">受け取る年齢ごとに比べる</button>
+        </form>
+        <p class="intro-disclaimer">※ 所得税（復興特別所得税を含む）と住民税の概算です。退職金もiDeCoも「退職所得の受給に関する申告書」を出している前提で、一時金で受け取る場合だけを比べています。入力内容はブラウザの中だけで処理され、送信・保存されません。</p>
+      </div>
+    </section>
+
+    <section id="screen-result" class="screen" data-screen="result" hidden>
+      <div class="card card--intro" id="result-body"></div>
+      <div id="ad-slot-result-bottom" class="ad-slot" aria-hidden="true"></div>
+
+      <div class="card card--lead" id="lead-card">
+        <h2 class="card__title">計算結果をあとで見返したい方へ</h2>
+        <p>メールアドレスを登録すると、HAKONIWA LABの新しいツール・お得な情報をお届けします。</p>
+        <form id="lead-form" class="lead-form" action="https://mail-studio.hakoniwa-labs.workers.dev/f/v6lGNd5ZqjptO-bG2wVIIij1IczI0iWg" method="post" target="popupwindow" onsubmit="window.open('https://mail-studio.hakoniwa-labs.workers.dev/f/v6lGNd5ZqjptO-bG2wVIIij1IczI0iWg', 'popupwindow')">
+          <input type="email" name="email" class="lead-form__input" placeholder="メールアドレス" required>
+          <button type="submit" class="btn btn--primary">登録する</button>
+        </form>
+      </div>
+
+      <button type="button" class="btn btn--ghost" id="btn-restart">条件を変えて比べる</button>
+    </section>
+
+  </main>
+
+  <section class="article" aria-labelledby="about-heading">
+    <div class="card card--article">
+      <h2 id="about-heading">このシミュレーターでわかること</h2>
+      <p>iDeCoの一時金を受け取る年齢を1歳ずつずらして、退職金と合わせた所得税・住民税の合計を比較表にします。同じ税額が続く年齢はまとめて1行にしているので、「何歳より前か後か」で税金が変わる境目が見えます。</p>
+      <p>退職金を受け取る時期は、定年や会社の規程で決まっていることがほとんどです。自分で選べるのはiDeCoの受け取り時期（60〜75歳の間）のほうなので、このシミュレーターは退職金の年齢を固定し、iDeCoの年齢だけを動かしています。</p>
+    </div>
+
+    <div class="card card--article">
+      <h2>受け取り順で税金が変わる理由</h2>
+      <p>退職金も、iDeCoを一時金で受け取ったお金も、税金の上ではどちらも「退職所得」です。どちらにも退職所得控除があり、その大きさは勤続年数（iDeCoは掛金を出した年数）で決まります。</p>
+      <p>ここで問題になるのが、<strong>会社に勤めながらiDeCoに掛金を出していた期間</strong>です。この期間は、退職金の勤続年数とiDeCoの年数の両方に入っています。同じ期間で控除を二重に使えないよう、後から受け取るほうの控除から、重なった年数ぶんの控除を差し引く仕組みがあります。</p>
+      <p>この差し引きがかかるかどうかは、2つを受け取る間隔で決まります。</p>
+      <div class="table-scroll">
+        <table class="guide-table">
+          <thead><tr><th>受け取り方</th><th>控除が減る条件</th><th>減るほう</th></tr></thead>
+          <tbody>
+            <tr><td>iDeCoが先 → 退職金</td><td>iDeCoを受け取った年の翌年から<strong>9年以内</strong>に退職金を受け取る（いわゆる10年ルール）</td><td>退職金の控除</td></tr>
+            <tr><td>退職金が先 → iDeCo</td><td>退職金を受け取った年の翌年から<strong>19年以内</strong>にiDeCoを受け取る（いわゆる19年ルール）</td><td>iDeCoの控除</td></tr>
+            <tr><td>同じ年に両方</td><td>差し引きではなく、勤続年数と掛金の年数を通算して控除を1回で計算する</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>数え方は暦年（1〜12月）です。たとえば「iDeCoが先」の場合、iDeCoを受け取った年から10年以上あけて退職金を受け取れば、退職金の控除は減りません。</p>
+    </div>
+
+    <div class="card card--article">
+      <h2>2026年1月から「5年ルール」が「10年ルール」になった</h2>
+      <p>iDeCoを先に受け取った場合の期間は、以前は「前年以前4年内」でした。60歳でiDeCo、65歳で退職金のように5年あければ、退職金の控除はそのまま使えました。これがいわゆる5年ルールです。</p>
+      <p>令和7年度の税制改正で、これが<strong>「前年以前9年内」</strong>に延びました。<strong>2026年1月1日以後に受け取るiDeCoなど確定拠出年金の一時金</strong>が対象です。60歳でiDeCo、65歳で退職金という受け取り方は、いまは控除の差し引きがかかります。</p>
+      <p>退職金を65歳で受け取る場合、10年あけるにはiDeCoを55歳以前に受け取る必要がありますが、iDeCoは原則60歳からしか受け取れません。つまり<strong>65歳で退職金を受け取る人は、iDeCoを先に受け取っても10年ルールを避けられない</strong>ということです。</p>
+    </div>
+
+    <div class="card card--article">
+      <h2>見落とされやすい点：先に受け取った額が控除枠より小さいと、減る控除も小さい</h2>
+      <p>「10年ルールに当たると、重なった期間の控除が丸ごと消える」と説明されることがありますが、それは先に受け取った金額が大きい場合の話です。</p>
+      <p>先に受け取ったほうの金額が、そのお金自身の退職所得控除額より少ない場合は、重なっている期間を次の年数に<strong>短くして</strong>計算します（所得税法施行令70条2項）。</p>
+      <div class="guide-calc">
+        先に受け取った額が800万円以下 → <strong>受け取った額 ÷ 40万円</strong> 年（端数は切り捨て）<br>
+        800万円を超える → <strong>（受け取った額 − 800万円）÷ 70万円 ＋ 20</strong> 年
+      </div>
+      <p>たとえば、掛金を20年出したiDeCo（控除枠800万円）を600万円受け取った場合、重なりは「600万円÷40万円＝15年」とみなされます。<strong>退職金の控除から減るのは最大でも15年ぶんの600万円</strong>で、20年ぶんの800万円ではありません。</p>
+      <h3>計算例：退職金2,000万円を65歳で受け取る場合</h3>
+      <p>勤続43年（22〜65歳）で退職金2,000万円、iDeCoは40〜60歳の20年で600万円とします。</p>
+      <div class="table-scroll">
+        <table class="guide-table">
+          <thead><tr><th>iDeCoを受け取る年齢</th><th>何が起きるか</th><th>税金の合計</th></tr></thead>
+          <tbody>
+            <tr><td>60〜64歳（先）</td><td>iDeCoは控除枠内で非課税。退職金の控除が2,410万円から600万円減って1,810万円に</td><td class="num">143,497円</td></tr>
+            <tr><td>65歳（同じ年）</td><td>43年を通算した控除2,410万円を、合計2,600万円に使う</td><td class="num">143,497円</td></tr>
+            <tr><td>66〜75歳（後）</td><td>退職金は非課税。iDeCoの控除は重なり19年ぶんの760万円が減り、下限の80万円に</td><td class="num">425,912円</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>この例では、iDeCoを<strong>退職金より後に回すと税金が約28万円多くなり</strong>、先に受け取るのと同じ年にまとめるのは同じ税額でした。退職金を先に受け取ったときの「後の」iDeCoの計算にも同じ短縮が働いていて、退職金2,000万円が自分の控除枠2,410万円より少ないため、重なりは19年ぶんとみなされています。</p>
+      <p class="guide-note">上記は本ページのシミュレーターと同じ計算で出した概算です。</p>
+    </div>
+
+    <div class="card card--article">
+      <h2>年金で受け取るという選択肢</h2>
+      <p>iDeCoは一時金のほか、5〜20年の年金（分割）や、一時金と年金の組み合わせでも受け取れます。年金で受け取る分は退職所得ではなく雑所得となり、公的年金等控除の対象です。退職所得控除の差し引きの話とは関係しなくなります。</p>
+      <p>ただし年金で受け取る分は公的年金と合算して課税されるため、税額は年金の額やほかの所得によって変わります。所得が増えることで、国民健康保険料や介護保険料に影響することもあります。<strong>このシミュレーターは一時金で受け取る場合だけを計算しています。</strong>一時金の税金が大きく出たときは、年金受け取りや併用も含めて、受け取る先の金融機関や税務署で確認してください。</p>
+    </div>
+
+    <div class="card card--article">
+      <h2>計算の前提</h2>
+      <ul>
+        <li>所得税（復興特別所得税を含む）と住民税10%を、退職所得の分離課税として計算しています</li>
+        <li>退職金もiDeCoも「退職所得の受給に関する申告書」を提出している前提です</li>
+        <li>iDeCoの掛金は、入力した年数のあいだ途切れずに出した前提です。掛金を止めていた期間（運用指図者の期間）は勤続年数に入りません</li>
+        <li>一時金の額は、受け取る年齢によって変わらないものとして計算しています（運用による増減は考えていません）</li>
+        <li>年齢は受け取る年の目安です。誕生日と支払月によっては、同じ年齢でも暦年がずれます</li>
+        <li>2026年1月1日以後に受け取るものとして計算しています</li>
+        <li>受け取れる最初の年齢は、60歳時点で掛金を出した年数から判定しています。運用指図者の期間も通算されるため、実際にはもっと早く受け取れる場合があります</li>
+        <li>役員退職金（特定役員退職手当等）、障害者になったことによる退職、2か所以上からの退職金、iDeCoと企業型DCの両方がある場合には対応していません</li>
+      </ul>
+      <p>正確な金額は、退職所得の源泉徴収票や、受け取る先の金融機関・税務署・税理士にご確認ください。</p>
+    </div>
+
+    <div class="card card--article">
+      <h2>よくある質問</h2>
+      <details class="faq-item">
+        <summary>iDeCoの10年ルールとは何ですか？</summary>
+        <p>iDeCoなど確定拠出年金の一時金を受け取った年の翌年から9年以内に退職金を受け取ると、退職金の退職所得控除から、期間が重なっている年数ぶんの控除が差し引かれるルールです。2026年1月1日以後に受け取る一時金から対象になりました。それまでは4年以内（いわゆる5年ルール）でした。</p>
+      </details>
+      <details class="faq-item">
+        <summary>iDeCoと退職金はどちらを先に受け取るのがいいですか？</summary>
+        <p>金額と期間の重なり方で変わります。退職金を先に受け取ると、その後19年以内に受け取るiDeCoの控除が大きく減りやすくなります。iDeCoを先に受け取る場合や同じ年にまとめる場合は、iDeCoの一時金が自分の控除枠より小さいと差がつきにくくなります。このシミュレーターで、自分の金額を入れて比べてください。</p>
+      </details>
+      <details class="faq-item">
+        <summary>iDeCoを先に受け取ると、退職金の控除はどれくらい減りますか？</summary>
+        <p>原則は、iDeCoの掛金期間と勤続期間が重なっている年数ぶんの控除額です（重なり20年なら800万円）。ただしiDeCoの一時金が、iDeCo自身の退職所得控除額より少ない場合は、重なりを「一時金÷40万円」年に短くして計算します。一時金600万円なら15年ぶん、減るのは最大600万円です。</p>
+      </details>
+      <details class="faq-item">
+        <summary>iDeCoを60歳から受け取れないことはありますか？</summary>
+        <p>あります。60歳時点の通算加入者等期間が10年未満の場合、受け取り開始は61〜65歳に遅れます。60歳以上で初めて加入した場合は、加入から5年を過ぎてからです。受け取りは75歳までに始める必要があります。</p>
+      </details>
+      <details class="faq-item">
+        <summary>入力内容は保存されますか？</summary>
+        <p>保存されません。計算はブラウザの中で行い、入力した金額をサーバーへ送信・保存する仕組みは持っていません。</p>
+      </details>
+    </div>
+
+    <div class="card card--article">
+      <h2>出典</h2>
+      <ul>
+        <li>国税庁「No.2732 退職手当等に対する源泉徴収」<a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/gensen/2732.htm" target="_blank" rel="noopener">https://www.nta.go.jp/taxes/shiraberu/taxanswer/gensen/2732.htm</a></li>
+        <li>e-Gov法令検索「所得税法」第30条 <a href="https://laws.e-gov.go.jp/law/340AC0000000033" target="_blank" rel="noopener">https://laws.e-gov.go.jp/law/340AC0000000033</a></li>
+        <li>e-Gov法令検索「所得税法施行令」第69条・第70条・第71条の2 <a href="https://laws.e-gov.go.jp/law/340CO0000000096" target="_blank" rel="noopener">https://laws.e-gov.go.jp/law/340CO0000000096</a></li>
+        <li>iDeCo公式サイト「iDeCoの加入資格・掛金・受取方法等」<a href="https://www.ideco-koushiki.jp/guide/structure.html" target="_blank" rel="noopener">https://www.ideco-koushiki.jp/guide/structure.html</a></li>
+      </ul>
+    </div>
+
+    <div class="card card--article">
+      <h2>あわせて使いたいツール・記事</h2>
+      <ul>
+        <li><a href="../">退職金手取りシミュレーター</a> — 退職金だけの手取りを計算します</li>
+        <li><a href="../guide/ideco-10nen-rule/">iDeCoの10年ルールとは？退職金との受け取り順を比較表で解説</a> — 退職金を60歳・65歳・70歳で受け取る4つの例</li>
+        <li><a href="../guide/taishokukin-tedori-keisan/">退職金の手取りはいくら？計算方法と勤続年数別の早見表</a></li>
+        <li><a href="../guide/shinkokusho-dashiwasure/">退職所得の受給に関する申告書の出し忘れ｜確定申告で精算する手順を解説</a></li>
+        <li><a href="../../takehome-calculator/">手取り年収シミュレーター</a> — 再雇用・再就職後の手取りの目安を計算できます</li>
+      </ul>
+    </div>
+
+    <div class="card card--article">
+      <h2>運営者について</h2>
+      <p>本サイトはHAKONIWA LAB(運営者: 灯家)が個人で企画・開発・運営しています。退職金手取りシミュレーターや退職願・退職届自動作成ツールなど、退職前後に役立つツールも公開しています。</p>
+    </div>
+  </section>
+
+  <footer class="app-footer">
+    <p>本サイトはiDeCoの一時金と退職金にかかる税金の概算把握を目的としており、正確な税額を保証するものではありません。実際の手続き・申告は公式情報・専門家にご確認ください。「PR」表記のあるリンクにはプロモーション(アフィリエイト広告)が含まれます。</p>
+    <p><a href="../../about.html">運営者情報</a>・<a href="../../contact.html">お問い合わせ</a>・<a href="../../privacy.html">プライバシーポリシー</a></p>
+  </footer>
+
+</div>
+
+<script src="../js/calculate.js"></script>
+<script src="../js/ideco-calc.js"></script>
+<script src="../js/ideco-app.js"></script>
+</body>
+</html>
