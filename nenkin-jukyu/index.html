@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WTBHV5QYG3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WTBHV5QYG3');
+</script>
+<title>年金は何歳から受け取ると得？繰上げ・繰下げの損益分岐シミュレーター(加給年金つき)</title>
+<meta name="description" content="老齢年金を60〜75歳のいつから受け取ると累計がいちばん多くなるかを、繰上げ0.4%減・繰下げ0.7%増で計算します。60歳開始の損益分岐は80歳10か月ごろ、70歳開始は81歳10か月ごろ。加給年金がある人は繰下げの損益分岐が遅くなる理由も。登録不要・無料。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="年金は何歳から受け取ると得？繰上げ・繰下げの損益分岐シミュレーター(加給年金つき)">
+<meta property="og:description" content="老齢年金を60〜75歳のいつから受け取ると累計がいちばん多くなるかを、繰上げ0.4%減・繰下げ0.7%増で計算します。60歳開始の損益分岐は80歳10か月ごろ、70歳開始は81歳10か月ごろ。加給年金がある人は繰下げの損益分岐が遅くなる理由も。登録不要・無料。">
+<meta property="og:url" content="https://hakoniwalab.com/retirement-simulator/nenkin-jukyu/">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6465548593525933" crossorigin="anonymous"></script>
+<link rel="canonical" href="https://hakoniwalab.com/retirement-simulator/nenkin-jukyu/">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"年金を60歳から繰上げると、何歳で損になりますか？","acceptedAnswer":{"@type":"Answer","text":"昭和37年4月2日以後生まれで60歳から全部繰上げると24%減り、65歳から受け取る場合と累計が並ぶのは80歳10か月ごろです。それより長生きすると65歳から受け取るほうが多くなります。"}},{"@type":"Question","name":"年金を70歳まで繰下げると、何歳で得になりますか？","acceptedAnswer":{"@type":"Answer","text":"42%増えて、65歳から受け取る場合と累計が並ぶのは81歳10か月ごろです。加給年金がある人は、繰下げ中に加給年金を受け取れないので、損益分岐がさらに遅くなります。"}},{"@type":"Question","name":"加給年金は繰下げで増えますか？","acceptedAnswer":{"@type":"Answer","text":"増えません。加給年金額と振替加算額は繰下げの増額の対象外で、繰下げて待っている間は受け取ることもできません(日本年金機構)。"}},{"@type":"Question","name":"老齢基礎年金と老齢厚生年金を別々に繰下げられますか？","acceptedAnswer":{"@type":"Answer","text":"繰下げは別々の時期にできます。繰上げは、原則として老齢基礎年金と老齢厚生年金を同時に繰り上げます。"}}]}</script>
+<style>
+.guide-nav { max-width: 720px; margin: 0 auto 16px; padding: 0 20px; font-size: 0.85rem; color: var(--color-text-muted); }
+.guide-nav a { color: var(--color-text-muted); }
+.guide-lead { font-size: 0.95rem; }
+.guide-table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.9rem; }
+.guide-table th, .guide-table td { border: 1px solid var(--color-border); padding: 8px 10px; text-align: left; vertical-align: top; }
+.guide-table th { background: var(--color-bg); font-weight: 600; }
+.guide-table td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.guide-table tr.is-best td { background: var(--color-badge-bg); font-weight: 700; }
+.guide-note { font-size: 0.85rem; color: var(--color-text-muted); }
+.card--article h3 { font-size: 1rem; margin: 18px 0 6px; }
+.guide-cta { text-align: center; }
+.guide-cta .btn { display: inline-block; text-decoration: none; }
+.guide-calc { text-align: left; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 8px; padding: 12px 14px; margin: 14px 0; font-size: 0.92rem; }
+.guide-calc label { display: block; font-weight: 600; margin: 8px 0 4px; font-size: 0.88rem; }
+.guide-calc input, .guide-calc select { width: 100%; padding: 8px; border: 1px solid var(--color-border); border-radius: 6px; font-size: 1rem; background: var(--color-surface); color: var(--color-text); }
+.guide-calc .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.guide-calc .row3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; }
+.guide-result { margin-top: 12px; font-size: 0.95rem; }
+.guide-result strong { font-size: 1.1rem; }
+.table-scroll { overflow-x: auto; }
+.date-row { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 6px; margin-bottom: 8px; }
+.form-help { font-size: 0.85rem; color: var(--color-text-muted); }
+.guide-calc .quiz-select, .date-row .quiz-select { width: 100%; }
+.nw { white-space: nowrap; }
+.card--article a[target="_blank"] { overflow-wrap: anywhere; }
+.art-cta { text-align: center; margin: 16px 0 4px; padding: 14px 12px; border: 1px dashed var(--color-border); border-radius: 8px; }
+.card--article .art-cta p { font-size: 0.85rem; margin: 0 0 10px; }
+.art-cta__links { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <nav class="guide-nav" aria-label="パンくずリスト">
+    <a href="../">退職金手取りシミュレーター</a> &raquo;
+    <span aria-current="page">年金の受け取り開始年齢</span>
+  </nav>
+
+  <header class="app-header">
+    <p class="app-header__eyebrow">年金の繰上げ・繰下げ</p>
+    <h1 class="app-header__title">年金は何歳から<br>受け取ると得？</h1>
+    <p class="app-header__lead">60〜75歳のどこから受け取ると累計がいちばん多くなるかを、加給年金まで含めて比べます。</p>
+  </header>
+
+  <main class="main">
+    <section class="screen">
+      <div class="card card--intro">
+        <form id="nj-form">
+          <p class="form-help" style="margin-top:0">生年月日(繰上げの減額率と繰下げの上限が変わります)</p>
+          <div class="date-row">
+            <select id="nj-year" class="quiz-select" aria-label="年"></select>
+            <select id="nj-month" class="quiz-select" aria-label="月"></select>
+            <select id="nj-day" class="quiz-select" aria-label="日"></select>
+          </div>
+          <div class="guide-calc">
+            <div class="row2">
+              <div><label for="nj-kiso">65歳からの老齢基礎年金(年額・万円)</label><input id="nj-kiso" type="number" inputmode="decimal" min="0" step="0.1" value="80"></div>
+              <div><label for="nj-kosei">65歳からの老齢厚生年金(年額・万円)</label><input id="nj-kosei" type="number" inputmode="decimal" min="0" step="0.1" value="100"></div>
+            </div>
+            <label><input type="checkbox" id="nj-kakyu" style="width:auto"> 配偶者の加給年金がある(厚生年金20年以上で、年下の配偶者を扶養している)</label>
+            <div id="nj-kakyu-box" hidden>
+              <div class="row2">
+                <div><label for="nj-diff">配偶者は何歳年下？</label><input id="nj-diff" type="number" min="0" max="20" value="3"></div>
+                <div><label for="nj-kakyu-amt">加給年金(年額・円)</label><input id="nj-kakyu-amt" type="number" min="0" value="423700"></div>
+              </div>
+            </div>
+            <label for="nj-until">何歳まで受け取る想定で累計を比べる？</label>
+            <input id="nj-until" type="number" min="70" max="105" value="90">
+          </div>
+          <button type="submit" class="btn btn--primary btn--large">比べる</button>
+          <p class="guide-note">金額は「ねんきん定期便」や「ねんきんネット」の65歳時点の見込額を入れてください。入力は端末の中にだけ保存し、外部には送りません。</p>
+        </form>
+      </div>
+      <div class="card" id="nj-result" hidden><div id="nj-result-body"></div></div>
+    </section>
+
+    <section class="article">
+
+      <div class="card card--article">
+        <h2>繰上げは1か月0.4%減、繰下げは1か月0.7%増</h2>
+        <p>老齢年金は原則65歳から受け取りますが、60歳から75歳までの間で、受け取り始める時期を選べます。早めると減り、遅らせると増えて、その割合は一生変わりません(日本年金機構)。</p>
+        <ul>
+          <li><strong>繰上げ(60〜64歳)</strong> — 1か月早めるごとに0.4%減(最大24%)。昭和37年4月1日以前生まれは0.5%(最大30%)</li>
+          <li><strong>繰下げ(66〜75歳)</strong> — 1か月遅らせるごとに0.7%増(最大84%)。昭和27年4月1日以前生まれは70歳(42%)まで</li>
+        </ul>
+        <p>一度繰り上げると取り消せません。繰下げは、老齢基礎年金と老齢厚生年金を別々の時期にできます。</p>
+      </div>
+
+      <div class="card card--article">
+        <h2>損益分岐の目安(65歳から受け取る場合と比べて)</h2>
+        <div class="table-scroll">
+          <table class="guide-table">
+            <thead><tr><th>受け取り開始</th><th>増減率</th><th>累計が65歳開始と並ぶ年齢</th></tr></thead>
+            <tbody>
+            <tr><td>60歳</td><td>-24.0%</td><td>80歳10か月ごろ</td></tr>
+            <tr><td>61歳</td><td>-19.2%</td><td>81歳10か月ごろ</td></tr>
+            <tr><td>62歳</td><td>-14.4%</td><td>82歳10か月ごろ</td></tr>
+            <tr><td>63歳</td><td>-9.6%</td><td>83歳10か月ごろ</td></tr>
+            <tr><td>64歳</td><td>-4.8%</td><td>84歳10か月ごろ</td></tr>
+            <tr><td>66歳</td><td>+8.4%</td><td>77歳10か月ごろ</td></tr>
+            <tr><td>67歳</td><td>+16.8%</td><td>78歳10か月ごろ</td></tr>
+            <tr><td>68歳</td><td>+25.2%</td><td>79歳10か月ごろ</td></tr>
+            <tr><td>69歳</td><td>+33.6%</td><td>80歳10か月ごろ</td></tr>
+            <tr><td>70歳</td><td>+42.0%</td><td>81歳10か月ごろ</td></tr>
+            <tr><td>71歳</td><td>+50.4%</td><td>82歳10か月ごろ</td></tr>
+            <tr><td>72歳</td><td>+58.8%</td><td>83歳10か月ごろ</td></tr>
+            <tr><td>73歳</td><td>+67.2%</td><td>84歳10か月ごろ</td></tr>
+            <tr><td>74歳</td><td>+75.6%</td><td>85歳10か月ごろ</td></tr>
+            <tr><td>75歳</td><td>+84.0%</td><td>86歳10か月ごろ</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>加給年金がない場合の目安です。繰上げは「この年齢より長生きすると65歳開始のほうが多くなる」、繰下げは「この年齢より長生きすると繰下げのほうが多くなる」年齢です。年金の金額によらず、だいたい同じ年齢になります(開始月の数え方で1か月ずれることがあります)。</p>
+      </div>
+
+      <div class="card card--article">
+        <h2>加給年金がある人は、繰下げの損益分岐が遅くなる</h2>
+        <p>厚生年金に20年以上入っていて、年下の配偶者を扶養している人には、65歳から配偶者が65歳になるまで<strong>加給年金</strong>(令和8年度は配偶者分243,800円＋特別加算、昭和18年4月2日以後生まれで合計423,700円)が付きます。</p>
+        <p>ところが、<strong>加給年金は繰下げても増えず、繰下げて待っているあいだは受け取れません</strong>(日本年金機構)。配偶者が5歳年下の場合で試算すると、次のようになります(老齢基礎年金80万円・老齢厚生年金100万円の例)。</p>
+        <div class="table-scroll">
+          <table class="guide-table">
+            <thead><tr><th>受け取り開始</th><th>累計が65歳開始と並ぶ年齢</th><th>90歳までの累計</th></tr></thead>
+            <tbody>
+            <tr><td>65歳</td><td>—</td><td>4,712万円</td></tr>
+            <tr><td>66歳</td><td>80歳8か月ごろ</td><td>4,852万円</td></tr>
+            <tr><td>68歳</td><td>82歳8か月ごろ</td><td>5,043万円</td></tr>
+            <tr><td>70歳</td><td>84歳8か月ごろ</td><td>5,112万円</td></tr>
+            <tr><td>75歳</td><td>88歳3か月ごろ</td><td>4,968万円</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>加給年金がない場合、70歳開始の損益分岐は81歳10か月ごろですが、配偶者が5歳年下で加給年金がある場合は84歳8か月ごろまで遅くなります。老齢厚生年金だけを65歳から受け取り、老齢基礎年金だけを繰り下げると、加給年金を受け取りながら基礎年金を増やすこともできます。配偶者が65歳になると、配偶者の老齢基礎年金に振替加算が付く場合があります(振替加算も繰下げの増額の対象外です)。</p>
+      </div>
+
+      <div class="card card--article">
+        <h2>この表に入っていないもの</h2>
+        <ul>
+          <li><strong>税金と保険料</strong> — 年金が増えると、所得税・住民税・介護保険料・国民健康保険料(75歳からは後期高齢者医療の保険料)も増えます。手取りで比べると、繰下げの損益分岐はこの表より遅くなります。どのくらい遅くなるかは、住んでいる市区町村とほかの所得で変わります</li>
+          <li><strong>働いている間の年金</strong> — 厚生年金に入って働きながら受け取ると、在職老齢年金で一部が止まることがあり、止まった分は繰下げても増えません(<a href="../guide/zaishoku-rourei-nenkin/">在職老齢年金の早見表</a>)</li>
+          <li><strong>年金額の改定</strong> — 年金額は毎年度、物価や賃金に合わせて改定されます。この計算は、65歳時点の金額が一生変わらないものとして比べています</li>
+        </ul>
+      </div>
+
+      <div class="card card--article">
+        <h2>よくある質問</h2>
+        <details class="faq-item"><summary>年金を60歳から繰上げると、何歳で損になりますか？</summary><p>昭和37年4月2日以後生まれで60歳から全部繰上げると24%減り、65歳から受け取る場合と累計が並ぶのは80歳10か月ごろです。それより長生きすると65歳から受け取るほうが多くなります。</p></details>
+        <details class="faq-item"><summary>年金を70歳まで繰下げると、何歳で得になりますか？</summary><p>42%増えて、65歳から受け取る場合と累計が並ぶのは81歳10か月ごろです。加給年金がある人は、繰下げ中に加給年金を受け取れないので、損益分岐がさらに遅くなります。</p></details>
+        <details class="faq-item"><summary>加給年金は繰下げで増えますか？</summary><p>増えません。加給年金額と振替加算額は繰下げの増額の対象外で、繰下げて待っている間は受け取ることもできません(日本年金機構)。</p></details>
+        <details class="faq-item"><summary>老齢基礎年金と老齢厚生年金を別々に繰下げられますか？</summary><p>繰下げは別々の時期にできます。繰上げは、原則として老齢基礎年金と老齢厚生年金を同時に繰り上げます。</p></details>
+      </div>
+
+      <div class="card card--article">
+        <h2>出典</h2>
+        <ul>
+          <li>日本年金機構「年金の繰上げ受給」<br><a href="https://www.nenkin.go.jp/service/jukyu/seido/roureinenkin/kuriage-kurisage/20140421-01.html" target="_blank" rel="noopener">https://www.nenkin.go.jp/service/jukyu/seido/roureinenkin/kuriage-kurisage/20140421-01.html</a></li>
+          <li>日本年金機構「年金の繰下げ受給」<br><a href="https://www.nenkin.go.jp/service/jukyu/roureinenkin/kuriage-kurisage/20140421-02.html" target="_blank" rel="noopener">https://www.nenkin.go.jp/service/jukyu/roureinenkin/kuriage-kurisage/20140421-02.html</a></li>
+          <li>日本年金機構「加給年金額と振替加算」<br><a href="https://www.nenkin.go.jp/service/jukyu/seido/roureinenkin/kakyu-hurikae/20150401.html" target="_blank" rel="noopener">https://www.nenkin.go.jp/service/jukyu/seido/roureinenkin/kakyu-hurikae/20150401.html</a></li>
+        </ul>
+      </div>
+
+      <div class="card card--article">
+        <h2>あわせて読みたい</h2>
+        <ul>
+          <li><a href="../guide/zaishoku-rourei-nenkin/">在職老齢年金の早見表 2026年度(基準額65万円)</a></li>
+          <li><a href="../guide/nenkin-tsuchisho-calendar/">年金の書類カレンダー｜何月に何が届くか</a></li>
+          <li><a href="../ideco/">iDeCoと退職金の受け取り順シミュレーター</a></li>
+          <li><a href="../">退職金手取りシミュレーター</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>本ツールは日本年金機構が公表している増減率で一般的な比較をするものであり、個別の年金額を保証するものではありません。実際の金額はねんきん定期便・ねんきんネット・年金事務所で確認してください。「PR」表記のあるリンクにはプロモーション(アフィリエイト広告)が含まれます。</p>
+    <p><a href="../../about.html">運営者情報</a>・<a href="../../contact.html">お問い合わせ</a>・<a href="../../privacy.html">プライバシーポリシー</a></p>
+  </footer>
+
+</div>
+<script src="../js/nenkin-jukyu-calc.js"></script>
+<script src="../js/nenkin-jukyu-app.js"></script>
+</body>
+</html>

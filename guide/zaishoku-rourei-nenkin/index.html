@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WTBHV5QYG3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WTBHV5QYG3');
+</script>
+<title>在職老齢年金の早見表 2026年度｜基準額は62万円ではなく65万円、止まる額の計算</title>
+<meta name="description" content="2026年4月から在職老齢年金の基準額は月65万円(法律の62万円は令和6年度価格)。基本月額と総報酬月額相当額の合計が65万円を超えた分の半分が止まります。早見表と計算機、2025年度(51万円)との比較、止まった年金は繰下げても増えないことも。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在職老齢年金の早見表 2026年度｜基準額は62万円ではなく65万円、止まる額の計算">
+<meta property="og:description" content="2026年4月から在職老齢年金の基準額は月65万円(法律の62万円は令和6年度価格)。基本月額と総報酬月額相当額の合計が65万円を超えた分の半分が止まります。早見表と計算機、2025年度(51万円)との比較、止まった年金は繰下げても増えないことも。">
+<meta property="og:url" content="https://hakoniwalab.com/retirement-simulator/guide/zaishoku-rourei-nenkin/">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6465548593525933" crossorigin="anonymous"></script>
+<link rel="canonical" href="https://hakoniwalab.com/retirement-simulator/guide/zaishoku-rourei-nenkin/">
+<link rel="stylesheet" href="../../css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"在職老齢年金の基準額は2026年4月からいくらですか？","acceptedAnswer":{"@type":"Answer","text":"月65万円です。法律では62万円(令和6年度価格)と定められ、名目賃金変動率で改定された2026年度の額が65万円です(日本年金機構)。"}},{"@type":"Question","name":"年金が止まるのはどんなときですか？","acceptedAnswer":{"@type":"Answer","text":"厚生年金に加入して働きながら老齢厚生年金を受け取っていて、基本月額と総報酬月額相当額の合計が月65万円を超えたときです。超えた分の半分が止まります。"}},{"@type":"Question","name":"老齢基礎年金も止まりますか？","acceptedAnswer":{"@type":"Answer","text":"止まりません。在職老齢年金で止まるのは老齢厚生年金だけで、老齢基礎年金は全額受け取れます。"}},{"@type":"Question","name":"70歳以上で働いていても止まりますか？","acceptedAnswer":{"@type":"Answer","text":"70歳以上で厚生年金の適用事業所で働いている場合も、同じ計算で老齢厚生年金が止まることがあります。厚生年金の保険料はかかりません。"}}]}</script>
+<style>
+.guide-nav { max-width: 720px; margin: 0 auto 16px; padding: 0 20px; font-size: 0.85rem; color: var(--color-text-muted); }
+.guide-nav a { color: var(--color-text-muted); }
+.guide-lead { font-size: 0.95rem; }
+.guide-table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.9rem; }
+.guide-table th, .guide-table td { border: 1px solid var(--color-border); padding: 8px 10px; text-align: left; vertical-align: top; }
+.guide-table th { background: var(--color-bg); font-weight: 600; }
+.guide-table td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.guide-table tr.is-best td { background: var(--color-badge-bg); font-weight: 700; }
+.guide-note { font-size: 0.85rem; color: var(--color-text-muted); }
+.card--article h3 { font-size: 1rem; margin: 18px 0 6px; }
+.guide-cta { text-align: center; }
+.guide-cta .btn { display: inline-block; text-decoration: none; }
+.guide-calc { text-align: left; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 8px; padding: 12px 14px; margin: 14px 0; font-size: 0.92rem; }
+.guide-calc label { display: block; font-weight: 600; margin: 8px 0 4px; font-size: 0.88rem; }
+.guide-calc input, .guide-calc select { width: 100%; padding: 8px; border: 1px solid var(--color-border); border-radius: 6px; font-size: 1rem; background: var(--color-surface); color: var(--color-text); }
+.guide-calc .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.guide-calc .row3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; }
+.guide-result { margin-top: 12px; font-size: 0.95rem; }
+.guide-result strong { font-size: 1.1rem; }
+.table-scroll { overflow-x: auto; }
+.date-row { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 6px; margin-bottom: 8px; }
+.form-help { font-size: 0.85rem; color: var(--color-text-muted); }
+.guide-calc .quiz-select, .date-row .quiz-select { width: 100%; }
+.nw { white-space: nowrap; }
+.card--article a[target="_blank"] { overflow-wrap: anywhere; }
+.art-cta { text-align: center; margin: 16px 0 4px; padding: 14px 12px; border: 1px dashed var(--color-border); border-radius: 8px; }
+.card--article .art-cta p { font-size: 0.85rem; margin: 0 0 10px; }
+.art-cta__links { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <nav class="guide-nav" aria-label="パンくずリスト">
+    <a href="../../">退職金手取りシミュレーター</a> &raquo;
+    <span aria-current="page">在職老齢年金の早見表</span>
+  </nav>
+
+  <header class="app-header">
+    <p class="app-header__eyebrow">働きながら年金を受け取る</p>
+    <h1 class="app-header__title">在職老齢年金の早見表<br>2026年度</h1>
+    <p class="app-header__lead">給料と年金の合計が月65万円を超えると、超えた分の半分が止まります。</p>
+  </header>
+
+  <main class="main">
+
+    <section class="article">
+
+      <div class="card card--article">
+        <p class="guide-lead">60歳以降も厚生年金に入って働きながら老齢厚生年金を受け取ると、給料と年金の合計が一定額を超えた分、年金の一部が止まります。これが<strong>在職老齢年金</strong>です。2026年4月から、止まり始める基準額が<strong>月65万円</strong>(2025年度は51万円)に上がりました。</p>
+        <p>「2026年4月から62万円」という説明もよく見かけますが、62万円は法律が成立した時点(令和6年度価格)の額で、毎年度の賃金の伸びに合わせて改定された<strong>2026年度の実際の基準額は65万円</strong>です(日本年金機構)。</p>
+      </div>
+
+      <div class="card card--article">
+        <h2>計算のしかた</h2>
+        <p><strong>支給停止額(月額)＝(基本月額＋総報酬月額相当額−65万円)÷2</strong></p>
+        <ul>
+          <li><strong>基本月額</strong> — 老齢厚生年金(報酬比例部分)の月額。加給年金は含めません</li>
+          <li><strong>総報酬月額相当額</strong> — その月の標準報酬月額＋その月以前1年間の標準賞与額の合計÷12</li>
+          <li>合計が65万円以下なら止まりません。止まるのは老齢厚生年金だけで、<strong>老齢基礎年金は全額</strong>受け取れます</li>
+        </ul>
+        <div class="guide-calc" id="zr-calc">
+          <div class="row2">
+            <div><label for="zr-kihon">基本月額(老齢厚生年金の月額・万円)</label><input id="zr-kihon" type="number" inputmode="decimal" step="0.1" value="10"></div>
+            <div><label for="zr-soho">総報酬月額相当額(万円)</label><input id="zr-soho" type="number" inputmode="decimal" step="0.1" value="45"></div>
+          </div>
+          <p class="guide-result" id="zr-out" role="status"></p>
+        </div>
+      </div>
+
+      <div class="card card--article">
+        <h2>在職老齢年金の早見表(2026年度・基準額65万円)</h2>
+        <div class="table-scroll">
+          <table class="guide-table">
+            <thead><tr><th>基本月額＼総報酬</th><th>20万円</th><th>30万円</th><th>40万円</th><th>50万円</th><th>55万円</th><th>60万円</th><th>70万円</th></tr></thead>
+            <tbody>
+            <tr><td>5万円</td><td>全額</td><td>全額</td><td>全額</td><td>全額</td><td>全額</td><td>全額</td><td>0.0万円<br><small>停止5.0</small></td></tr>
+            <tr><td>8万円</td><td>全額</td><td>全額</td><td>全額</td><td>全額</td><td>全額</td><td>6.5万円<br><small>停止1.5</small></td><td>1.5万円<br><small>停止6.5</small></td></tr>
+            <tr><td>10万円</td><td>全額</td><td>全額</td><td>全額</td><td>全額</td><td>全額</td><td>7.5万円<br><small>停止2.5</small></td><td>2.5万円<br><small>停止7.5</small></td></tr>
+            <tr><td>12万円</td><td>全額</td><td>全額</td><td>全額</td><td>全額</td><td>11.0万円<br><small>停止1.0</small></td><td>8.5万円<br><small>停止3.5</small></td><td>3.5万円<br><small>停止8.5</small></td></tr>
+            <tr><td>15万円</td><td>全額</td><td>全額</td><td>全額</td><td>全額</td><td>12.5万円<br><small>停止2.5</small></td><td>10.0万円<br><small>停止5.0</small></td><td>5.0万円<br><small>停止10.0</small></td></tr>
+            <tr><td>20万円</td><td>全額</td><td>全額</td><td>全額</td><td>17.5万円<br><small>停止2.5</small></td><td>15.0万円<br><small>停止5.0</small></td><td>12.5万円<br><small>停止7.5</small></td><td>7.5万円<br><small>停止12.5</small></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="guide-note">表の金額は、受け取れる老齢厚生年金の月額(下の小さな数字は止まる額)。「全額」は止まらない組み合わせです。</p>
+      </div>
+
+      <div class="card card--article">
+        <h2>2025年度(51万円)と比べると</h2>
+        <div class="table-scroll">
+          <table class="guide-table">
+            <thead><tr><th>例</th><th>2025年度(51万円)</th><th>2026年度(65万円)</th></tr></thead>
+            <tbody>
+            <tr><td>基本月額10万円・総報酬40万円</td><td>全額</td><td>全額</td></tr>
+            <tr><td>基本月額10万円・総報酬50万円</td><td>4.5万円停止</td><td>全額</td></tr>
+            <tr><td>基本月額15万円・総報酬45万円</td><td>4.5万円停止</td><td>全額</td></tr>
+            <tr><td>基本月額12万円・総報酬55万円</td><td>8.0万円停止</td><td>1.0万円停止</td></tr>
+            <tr><td>基本月額20万円・総報酬50万円</td><td>9.5万円停止</td><td>2.5万円停止</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>基準額が14万円上がったので、多くの人で止まる額が月7万円ほど減るか、止まらなくなりました。</p>
+      </div>
+
+      <div class="card card--article">
+        <h2>止まった年金は、繰下げても増えない</h2>
+        <p>在職老齢年金で止まる分は、65歳以降に繰り下げても増額の対象になりません(日本年金機構)。働き続ける予定の人は、繰下げで増えるのは「止まらなかった分」だけ、と考えてください。<a href="../../nenkin-jukyu/">年金の受け取り開始年齢シミュレーター</a>で、繰上げ・繰下げの損益分岐を比べられます。</p>
+        <p>また、65歳以上70歳未満で厚生年金に入って働いている人は、毎年9月1日時点の加入記録で、10月分(12月に受け取る分)から老齢厚生年金が増えます(在職定時改定)。</p>
+      </div>
+
+      <div class="card card--article">
+        <h2>よくある質問</h2>
+        <details class="faq-item"><summary>在職老齢年金の基準額は2026年4月からいくらですか？</summary><p>月65万円です。法律では62万円(令和6年度価格)と定められ、名目賃金変動率で改定された2026年度の額が65万円です(日本年金機構)。</p></details>
+        <details class="faq-item"><summary>年金が止まるのはどんなときですか？</summary><p>厚生年金に加入して働きながら老齢厚生年金を受け取っていて、基本月額と総報酬月額相当額の合計が月65万円を超えたときです。超えた分の半分が止まります。</p></details>
+        <details class="faq-item"><summary>老齢基礎年金も止まりますか？</summary><p>止まりません。在職老齢年金で止まるのは老齢厚生年金だけで、老齢基礎年金は全額受け取れます。</p></details>
+        <details class="faq-item"><summary>70歳以上で働いていても止まりますか？</summary><p>70歳以上で厚生年金の適用事業所で働いている場合も、同じ計算で老齢厚生年金が止まることがあります。厚生年金の保険料はかかりません。</p></details>
+      </div>
+
+      <div class="card card--article">
+        <h2>出典</h2>
+        <ul>
+          <li>日本年金機構「在職老齢年金の計算方法」<br><a href="https://www.nenkin.go.jp/service/jukyu/seido/roureinenkin/zaishoku/20150401-01.html" target="_blank" rel="noopener">https://www.nenkin.go.jp/service/jukyu/seido/roureinenkin/zaishoku/20150401-01.html</a></li>
+          <li>日本年金機構「年金用語集 在職老齢年金」<br><a href="https://www.nenkin.go.jp/service/yougo/sagyo/zaishokurorei.html" target="_blank" rel="noopener">https://www.nenkin.go.jp/service/yougo/sagyo/zaishokurorei.html</a></li>
+          <li>日本年金機構「年金の繰下げ受給」<br><a href="https://www.nenkin.go.jp/service/jukyu/roureinenkin/kuriage-kurisage/20140421-02.html" target="_blank" rel="noopener">https://www.nenkin.go.jp/service/jukyu/roureinenkin/kuriage-kurisage/20140421-02.html</a></li>
+        </ul>
+      </div>
+
+      <div class="card card--article">
+        <h2>あわせて読みたい</h2>
+        <ul>
+          <li><a href="../../nenkin-jukyu/">年金は何歳から受け取ると得？繰上げ・繰下げの損益分岐シミュレーター</a></li>
+          <li><a href="../../guide/nenkin-tsuchisho-calendar/">年金の書類カレンダー｜何月に何が届くか</a></li>
+          <li><a href="../../">退職金手取りシミュレーター</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>本記事は日本年金機構が公表している計算方法で一般的な目安を示すものであり、個別の支給額を保証するものではありません。実際の金額は年金事務所で確認してください。「PR」表記のあるリンクにはプロモーション(アフィリエイト広告)が含まれます。</p>
+    <p><a href="../../../about.html">運営者情報</a>・<a href="../../../contact.html">お問い合わせ</a>・<a href="../../../privacy.html">プライバシーポリシー</a></p>
+  </footer>
+
+</div>
+<script>
+(function () {
+  const LIMIT = 65;
+  const f = () => {
+    const k = Number(document.getElementById("zr-kihon").value || 0), s = Number(document.getElementById("zr-soho").value || 0);
+    const st = Math.min(k, Math.max(0, (k + s - LIMIT) / 2));
+    document.getElementById("zr-out").innerHTML = st === 0
+      ? `合計${(k + s).toFixed(1)}万円で65万円以下なので、<strong>年金は全額</strong>受け取れます。`
+      : `合計${(k + s).toFixed(1)}万円。65万円を超えた${(k + s - LIMIT).toFixed(1)}万円の半分、<strong>月${st.toFixed(1)}万円が止まり</strong>、受け取れる老齢厚生年金は月${(k - st).toFixed(1)}万円です(老齢基礎年金は全額)。`;
+  };
+  ["zr-kihon", "zr-soho"].forEach((id) => document.getElementById(id).addEventListener("input", f));
+  f();
+})();
+</script>
+</body>
+</html>

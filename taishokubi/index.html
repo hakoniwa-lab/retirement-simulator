@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WTBHV5QYG3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WTBHV5QYG3');
+</script>
+<title>退職日シミュレーター｜65歳の前々日に辞めると失業保険3倍？月末退職と住民税も</title>
+<meta name="description" content="生年月日と退職日を入れると、失業給付(64歳までの基本手当か65歳からの高年齢求職者給付金か)、月末退職かどうかで変わる社会保険料、退職月で変わる住民税の扱いを判定します。基本手当になるのは65歳の誕生日の前々日までの退職。ハローワーク・日本年金機構の資料にもとづきます。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="退職日シミュレーター｜65歳の前々日に辞めると失業保険3倍？月末退職と住民税も">
+<meta property="og:description" content="生年月日と退職日を入れると、失業給付(64歳までの基本手当か65歳からの高年齢求職者給付金か)、月末退職かどうかで変わる社会保険料、退職月で変わる住民税の扱いを判定します。基本手当になるのは65歳の誕生日の前々日までの退職。ハローワーク・日本年金機構の資料にもとづきます。">
+<meta property="og:url" content="https://hakoniwalab.com/retirement-simulator/taishokubi/">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6465548593525933" crossorigin="anonymous"></script>
+<link rel="canonical" href="https://hakoniwalab.com/retirement-simulator/taishokubi/">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"65歳の誕生日の何日前に退職すれば失業保険(基本手当)をもらえますか？","acceptedAnswer":{"@type":"Answer","text":"65歳の誕生日の前々日までに退職すると、64歳での離職として基本手当の対象になります。法律上は誕生日の前日に65歳になるので、誕生日の前日の退職はもう65歳での離職です。"}},{"@type":"Question","name":"64歳と65歳で失業保険はどのくらい変わりますか？","acceptedAnswer":{"@type":"Answer","text":"雇用保険に20年以上入っていた人が自己都合で辞める場合、64歳なら基本手当150日分、65歳以後なら高年齢求職者給付金50日分の一時金です。特別支給の老齢厚生年金を受けている人は、基本手当を受ける間その年金が止まります。"}},{"@type":"Question","name":"月末に退職すると社会保険料は損ですか？","acceptedAnswer":{"@type":"Answer","text":"月末に退職すると、退職した月の健康保険・厚生年金の保険料も給与から引かれます。月末より前に辞めると会社の保険料はかかりませんが、その月の国民健康保険と国民年金の保険料がかかります。得か損かは金額の差で決まります。"}},{"@type":"Question","name":"4月に退職すると住民税はどうなりますか？","acceptedAnswer":{"@type":"Answer","text":"1月1日から4月30日の退職は、5月分までの残りの住民税が最後の給与や退職金から一括で差し引かれます。"}}]}</script>
+<style>
+.guide-nav { max-width: 720px; margin: 0 auto 16px; padding: 0 20px; font-size: 0.85rem; color: var(--color-text-muted); }
+.guide-nav a { color: var(--color-text-muted); }
+.guide-lead { font-size: 0.95rem; }
+.guide-table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.9rem; }
+.guide-table th, .guide-table td { border: 1px solid var(--color-border); padding: 8px 10px; text-align: left; vertical-align: top; }
+.guide-table th { background: var(--color-bg); font-weight: 600; }
+.guide-table td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.guide-table tr.is-best td { background: var(--color-badge-bg); font-weight: 700; }
+.guide-note { font-size: 0.85rem; color: var(--color-text-muted); }
+.card--article h3 { font-size: 1rem; margin: 18px 0 6px; }
+.guide-cta { text-align: center; }
+.guide-cta .btn { display: inline-block; text-decoration: none; }
+.guide-calc { text-align: left; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 8px; padding: 12px 14px; margin: 14px 0; font-size: 0.92rem; }
+.guide-calc label { display: block; font-weight: 600; margin: 8px 0 4px; font-size: 0.88rem; }
+.guide-calc input, .guide-calc select { width: 100%; padding: 8px; border: 1px solid var(--color-border); border-radius: 6px; font-size: 1rem; background: var(--color-surface); color: var(--color-text); }
+.guide-calc .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.guide-calc .row3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; }
+.guide-result { margin-top: 12px; font-size: 0.95rem; }
+.guide-result strong { font-size: 1.1rem; }
+.table-scroll { overflow-x: auto; }
+.date-row { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 6px; margin-bottom: 8px; }
+.form-help { font-size: 0.85rem; color: var(--color-text-muted); }
+.guide-calc .quiz-select, .date-row .quiz-select { width: 100%; }
+.nw { white-space: nowrap; }
+.card--article a[target="_blank"] { overflow-wrap: anywhere; }
+.art-cta { text-align: center; margin: 16px 0 4px; padding: 14px 12px; border: 1px dashed var(--color-border); border-radius: 8px; }
+.card--article .art-cta p { font-size: 0.85rem; margin: 0 0 10px; }
+.art-cta__links { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <nav class="guide-nav" aria-label="パンくずリスト">
+    <a href="../">退職金手取りシミュレーター</a> &raquo;
+    <span aria-current="page">退職日シミュレーター</span>
+  </nav>
+
+  <header class="app-header">
+    <p class="app-header__eyebrow">退職日で変わること</p>
+    <h1 class="app-header__title">退職日シミュレーター</h1>
+    <p class="app-header__lead">退職日が1日違うだけで、失業給付・社会保険料・住民税の扱いが変わることがあります。</p>
+  </header>
+
+  <main class="main">
+    <section class="screen">
+      <div class="card card--intro">
+        <form id="tb-form">
+          <p class="form-help" style="margin-top:0">生年月日</p>
+          <div class="date-row">
+            <select id="tb-by" class="quiz-select" aria-label="年"></select>
+            <select id="tb-bm" class="quiz-select" aria-label="月"></select>
+            <select id="tb-bd" class="quiz-select" aria-label="日"></select>
+          </div>
+          <p class="form-help">退職する日(最後の出勤日ではなく、雇用契約の最終日)</p>
+          <div class="date-row">
+            <select id="tb-ry" class="quiz-select" aria-label="年"></select>
+            <select id="tb-rm" class="quiz-select" aria-label="月"></select>
+            <select id="tb-rd" class="quiz-select" aria-label="日"></select>
+          </div>
+          <div class="guide-calc">
+            <label for="tb-period">雇用保険に入っていた期間</label>
+            <select id="tb-period">
+              <option value="lt1">1年未満</option>
+              <option value="1to5">1年以上5年未満</option>
+              <option value="5to10">5年以上10年未満</option>
+              <option value="10to20">10年以上20年未満</option>
+              <option value="ge20" selected>20年以上</option>
+            </select>
+            <label for="tb-reason">辞める理由</label>
+            <select id="tb-reason">
+              <option value="jiko">自己都合(定年・契約満了で更新を希望しない場合を含む)</option>
+              <option value="kaisha">会社都合(倒産・解雇など)</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn--primary btn--large">退職日で何が変わるか見る</button>
+          <p class="guide-note">入力は端末の中にだけ保存し、外部には送りません。</p>
+        </form>
+      </div>
+      <div class="card" id="tb-result" hidden><div id="tb-result-body"></div></div>
+    </section>
+
+    <section class="article">
+
+      <div class="card card--article">
+        <h2>「1日違いで失業保険が3倍」の正体</h2>
+        <p class="guide-lead">65歳になる前に辞めると<strong>基本手当</strong>(いわゆる失業保険)、65歳以後に辞めると<strong>高年齢求職者給付金</strong>になります。雇用保険に20年以上入っていた人が自己都合で辞めると、基本手当は150日分、高年齢求職者給付金は50日分(一時金)なので、日数で3倍の差です。</p>
+        <p>境目は「65歳に達した日」で、法律上は<strong>誕生日の前日</strong>に年をとります(年齢計算ニ関スル法律・民法)。そのため、基本手当になるのは<strong>65歳の誕生日の前々日までに退職</strong>した場合です。誕生日の前日に辞めると、すでに65歳での離職になります。</p>
+        <p>ただし、65歳前に基本手当を受けるためにハローワークで求職の申込みをすると、<strong>特別支給の老齢厚生年金を受けている人はその年金が止まります</strong>(日本年金機構)。昭和36年4月2日以後生まれの男性・昭和41年4月2日以後生まれの女性は特別支給の対象ではないので関係ありません。高年齢求職者給付金は年金と一緒に受け取れます。</p>
+      </div>
+
+      <div class="card card--article">
+        <h2>基本手当の日数</h2>
+        <h3>自己都合など(全年齢)</h3>
+        <div class="table-scroll">
+          <table class="guide-table">
+            <thead><tr><th>雇用保険に入っていた期間</th><th>所定給付日数</th></tr></thead>
+            <tbody>
+            <tr><td>1年未満</td><td>受給資格がないことが多い</td></tr>
+            <tr><td>1年以上10年未満</td><td>90日</td></tr>
+            <tr><td>10年以上20年未満</td><td>120日</td></tr>
+            <tr><td>20年以上</td><td>150日</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>倒産・解雇など(特定受給資格者)</h3>
+        <div class="table-scroll">
+          <table class="guide-table">
+            <thead><tr><th>離職時の年齢</th><th>1年以上5年未満</th><th>5年以上10年未満</th><th>10年以上20年未満</th><th>20年以上</th></tr></thead>
+            <tbody>
+            <tr><td>30歳未満</td><td>90日</td><td>120日</td><td>180日</td><td>—</td></tr>
+            <tr><td>30歳以上35歳未満</td><td>120日</td><td>180日</td><td>210日</td><td>240日</td></tr>
+            <tr><td>35歳以上45歳未満</td><td>150日</td><td>180日</td><td>240日</td><td>270日</td></tr>
+            <tr><td>45歳以上60歳未満</td><td>180日</td><td>240日</td><td>270日</td><td>330日</td></tr>
+            <tr><td>60歳以上65歳未満</td><td>150日</td><td>180日</td><td>210日</td><td>240日</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="guide-note">1年未満は会社都合でも90日。契約更新を希望したのに更新されなかったなどの特定理由離職者は、2027年3月31日までの離職なら会社都合と同じ日数です(ハローワーク)。自己都合は7日の待期のあと、原則1か月の給付制限があります。</p>
+      </div>
+
+      <div class="card card--article">
+        <h2>月末に辞めるか、前日に辞めるか</h2>
+        <p>会社の健康保険・厚生年金の資格は<strong>退職日の翌日</strong>になくなり、保険料は<strong>資格をなくした日の属する月の前月分まで</strong>かかります(日本年金機構)。</p>
+        <ul>
+          <li><strong>月末に退職</strong> — 資格をなくすのは翌月1日。退職した月の保険料も給与から引かれる(締め日によっては最後の給与から2か月分)</li>
+          <li><strong>月末より前に退職</strong> — 退職した月の会社の保険料はかからない。そのかわり、その月から国民健康保険(または任意継続・家族の扶養)と、60歳未満なら国民年金(令和8年度 月17,920円)に入る</li>
+        </ul>
+        <p>「月末退職は損」と言われますが、月末より前に辞めても国保と国民年金の保険料がかかるので、得か損かは金額の差で決まります。厚生年金は将来の年金にも反映されます。</p>
+      </div>
+
+      <div class="card card--article">
+        <h2>何月に辞めるかで変わる住民税</h2>
+        <ul>
+          <li><strong>1月〜4月の退職</strong> — 5月分までの残りの住民税を、最後の給与や退職金から一括で差し引かれる(本人の希望にかかわらず。地方税法321条の5第2項)</li>
+          <li><strong>5月の退職</strong> — 5月分を最後の給与から引いて終わり。6月からの新年度分は納付書で納める</li>
+          <li><strong>6月〜12月の退職</strong> — 翌年5月分までの残りを、納付書で自分で納めるか、最後の給与から一括で引いてもらうかを選べる</li>
+        </ul>
+        <p>住民税は前年の所得にかかるので、退職した翌年も、前年の給与に応じた住民税の納付書が届きます。</p>
+      </div>
+
+      <div class="card card--article">
+        <h2>よくある質問</h2>
+        <details class="faq-item"><summary>65歳の誕生日の何日前に退職すれば失業保険(基本手当)をもらえますか？</summary><p>65歳の誕生日の前々日までに退職すると、64歳での離職として基本手当の対象になります。法律上は誕生日の前日に65歳になるので、誕生日の前日の退職はもう65歳での離職です。</p></details>
+        <details class="faq-item"><summary>64歳と65歳で失業保険はどのくらい変わりますか？</summary><p>雇用保険に20年以上入っていた人が自己都合で辞める場合、64歳なら基本手当150日分、65歳以後なら高年齢求職者給付金50日分の一時金です。特別支給の老齢厚生年金を受けている人は、基本手当を受ける間その年金が止まります。</p></details>
+        <details class="faq-item"><summary>月末に退職すると社会保険料は損ですか？</summary><p>月末に退職すると、退職した月の健康保険・厚生年金の保険料も給与から引かれます。月末より前に辞めると会社の保険料はかかりませんが、その月の国民健康保険と国民年金の保険料がかかります。得か損かは金額の差で決まります。</p></details>
+        <details class="faq-item"><summary>4月に退職すると住民税はどうなりますか？</summary><p>1月1日から4月30日の退職は、5月分までの残りの住民税が最後の給与や退職金から一括で差し引かれます。</p></details>
+      </div>
+
+      <div class="card card--article">
+        <h2>出典</h2>
+        <ul>
+          <li>ハローワーク「基本手当の所定給付日数」<br><a href="https://www.hellowork.mhlw.go.jp/insurance/insurance_benefitdays.html" target="_blank" rel="noopener">https://www.hellowork.mhlw.go.jp/insurance/insurance_benefitdays.html</a></li>
+          <li>厚生労働省「雇用保険制度」(高年齢求職者給付金)<br><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/koyou/koyouhoken/index_00003.html" target="_blank" rel="noopener">https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/koyou/koyouhoken/index_00003.html</a></li>
+          <li>日本年金機構「月の途中で入社したときや、退職したときは、厚生年金保険の保険料はどのようになりますか。」<br><a href="https://www.nenkin.go.jp/section/faq/kounen/hihokensha/20140902-01.html" target="_blank" rel="noopener">https://www.nenkin.go.jp/section/faq/kounen/hihokensha/20140902-01.html</a></li>
+          <li>日本年金機構「年金と雇用保険の失業給付との調整」<br><a href="https://www.nenkin.go.jp/service/jukyu/seido/roureinenkin/koyou-chosei/20140421-03.html" target="_blank" rel="noopener">https://www.nenkin.go.jp/service/jukyu/seido/roureinenkin/koyou-chosei/20140421-03.html</a></li>
+          <li>熊本県「退職者の住民税(特別徴収)」(地方税法321条の5第2項による一括徴収)<br><a href="https://www.pref.kumamoto.jp/uploaded/attachment/288085.pdf" target="_blank" rel="noopener">https://www.pref.kumamoto.jp/uploaded/attachment/288085.pdf</a></li>
+        </ul>
+      </div>
+
+      <div class="card card--article">
+        <h2>あわせて読みたい</h2>
+        <ul>
+          <li><a href="../nenkin-jukyu/">年金は何歳から受け取ると得？繰上げ・繰下げの損益分岐シミュレーター</a></li>
+          <li><a href="../../subsidy-checker/guide/taishokugo-kenkohoken/">退職後の健康保険は任意継続と国保どっちが安い？比較シミュレーター</a></li>
+          <li><a href="../guide/taishokukin-tedori-keisan/">退職金の手取りはいくら？計算方法と早見表</a></li>
+          <li><a href="../">退職金手取りシミュレーター</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>本ツールはハローワーク・日本年金機構が公表している一般的な決まりで判定するものであり、個別の受給資格や給付日数を保証するものではありません。実際の判断はハローワーク・年金事務所・市区町村で確認してください。「PR」表記のあるリンクにはプロモーション(アフィリエイト広告)が含まれます。</p>
+    <p><a href="../../about.html">運営者情報</a>・<a href="../../contact.html">お問い合わせ</a>・<a href="../../privacy.html">プライバシーポリシー</a></p>
+  </footer>
+
+</div>
+<script src="../js/taishokubi.js"></script>
+</body>
+</html>

@@ -57,6 +57,15 @@ iDeCo一時金を受け取る年齢を1歳ずつ動かし(退職金の年齢は�
 - 検証: 手計算5パターン(同じ年/先/後/10年の境目/短期の混在/60歳以降加入)と一致。記事 `guide/ideco-10nen-rule/` の数値もこのロジックをnodeで読み込んで出した
 - 対応外: iDeCoの年金受取、役員退職金、障害者の加算、2か所以上の退職金、iDeCoと企業型DCの併存
 
+## 年金・退職日のシミュレーターと記事(2026-10-12追加)
+
+ページは `C:/dev/tool-dev/tools/money-articles/build_*.py` で生成する(共通の枠は `kit.py`)。手で直さず、build を直して流し直す。
+
+- `nenkin-jukyu/` … 年金の受け取り開始年齢(繰上げ・繰下げ)の損益分岐。計算は `js/nenkin-jukyu-calc.js`(繰上げ0.4%・昭和37年4月1日以前生まれは0.5%、繰下げ0.7%・上限は昭和27年4月1日以前生まれ60か月/以後120か月、加給年金は繰下げの待機中は出ず増額もしない)。画面は `js/nenkin-jukyu-app.js`。記事の表は build が node でこの関数を呼んで出す
+- `taishokubi/` … 退職日で変わる失業給付(65歳に達する日=誕生日の前日の前に離職なら基本手当、以後は高年齢求職者給付金)・社会保険料(資格喪失は退職日の翌日)・住民税(1〜4月退職は一括徴収)。計算と画面は `js/taishokubi.js`
+- `guide/zaishoku-rourei-nenkin/` … 在職老齢年金。2026年度の基準額は65万円(法律の62万円は令和6年度価格)。毎年4月に日本年金機構の額で LIMIT を直す
+- `guide/nenkin-tsuchisho-calendar/` … 年金の書類カレンダー。日付は日本年金機構の「年間行事予定」で毎年度入れ直す
+
 ## マネタイズ導線
 
 初期実装(2026-08-02)時点ではアフィリエイト導線は未実装。takehome-calculator/furusato-simulatorと同様、`#ad-slot-result-bottom`(AdSense用プレースホルダ)と`#lead-form`(Buttondown、`hakoniwalab`アカウントと接続済み)を設置。将来的な候補としては、退職・老後をテーマにした資産形成相談・iDeCo/NISA関連のアフィリエイト案件が候補(insurance-checkerで承認済みの家計相談系案件を流用できる可能性あり)。
