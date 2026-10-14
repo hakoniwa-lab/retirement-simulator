@@ -64,7 +64,8 @@ function tbSimulate(v) {
 if (typeof module !== "undefined") module.exports = { tbSimulate, tbReachDate, tbAgeOn, tbBenefit };
 
 /* ---------- 画面 ---------- */
-if (typeof document !== "undefined") (function () {
+/* subsidy-checker の失業保険の計算機も tbBenefit を使うためにこのファイルを読むので、フォームがあるページだけ動かす */
+if (typeof document !== "undefined" && document.getElementById("tb-form")) (function () {
   const $ = (id) => document.getElementById(id);
   const STORE = "retirement-simulator:taishokubi";
   const fill = (ids, from, to, def) => {
