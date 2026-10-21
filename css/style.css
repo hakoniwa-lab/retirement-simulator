@@ -567,3 +567,7 @@ html, body {
 .books__title { display: block; font-weight: 600; font-size: 0.95rem; line-height: 1.5; }
 .books__note { display: block; font-size: 0.8rem; color: var(--color-text-muted); margin-top: 4px; }
 .books__ku { font-size: 0.8rem; color: var(--color-text-muted); margin: 10px 0 0; }
+
+/* 広告のあるページの冒頭に出す PR 表記(A8 はファーストビューでの広告表示を求めている。birthday-fortune・houyou-calendar と同じ形) */
+.pr-note { font-size: 0.75rem; color: var(--color-text-muted); margin: -8px 0 14px; }
+.app-header + .pr-note { text-align: center; }
