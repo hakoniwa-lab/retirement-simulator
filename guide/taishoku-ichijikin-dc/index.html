@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WTBHV5QYG3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WTBHV5QYG3');
+</script>
+<title>退職一時金が企業型DCに変わると言われたら｜60歳まで引き出せない・受け取り順の税金・確かめる6つ</title>
+<meta name="description" content="退職一時金が企業型DCに変わると、原則60歳まで引き出せず、金額は運用の結果で変わります。受け取り開始年齢の表、過去の退職金とDCの受け取り順で税金がどう変わるかの計算例、会社に確かめたい6つのことをまとめました。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="退職一時金が企業型DCに変わると言われたら｜60歳まで引き出せない・受け取り順の税金・確かめる6つ">
+<meta property="og:description" content="退職一時金が企業型DCに変わると、原則60歳まで引き出せず、金額は運用の結果で変わります。受け取り開始年齢の表、過去の退職金とDCの受け取り順で税金がどう変わるかの計算例、会社に確かめたい6つのことをまとめました。">
+<meta property="og:url" content="https://hakoniwalab.com/retirement-simulator/guide/taishoku-ichijikin-dc/">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6465548593525933" crossorigin="anonymous"></script>
+<link rel="canonical" href="https://hakoniwalab.com/retirement-simulator/guide/taishoku-ichijikin-dc/">
+<link rel="stylesheet" href="../../css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"退職金が企業型DCに変わると、辞めたときにお金はもらえないのですか？","acceptedAnswer":{"@type":"Answer","text":"原則として60歳まで引き出せません。辞めたあとは、iDeCoや転職先の企業型DCに資産を移して運用を続けます。脱退一時金を受け取れるのは、資産が少ないなどの限られた場合だけです。"}},{"@type":"Question","name":"企業型DCの一時金は退職金と同じ税金ですか？","acceptedAnswer":{"@type":"Answer","text":"どちらも退職所得です。企業型DCは掛金を出した期間を勤続年数として退職所得控除を計算します。退職金も受け取る人は、受け取り順で控除が調整されることがあります。"}},{"@type":"Question","name":"10年ルールは企業型DCにも当たりますか？","acceptedAnswer":{"@type":"Answer","text":"当たります。国税庁の説明では、確定拠出年金の老齢給付金として支給される一時金を対象にしていて、iDeCoと企業型DCを分けていません。2026年1月1日以後に受け取るDC一時金が対象です。"}},{"@type":"Question","name":"損をすることはありますか？","acceptedAnswer":{"@type":"Answer","text":"あります。企業型DCは運用の結果で受け取る額が変わり、元本を下回ることもあります。元本確保型の商品が用意されていれば選ぶこともできますが、増えにくくなります。"}},{"@type":"Question","name":"退職後に何もしないとどうなりますか？","acceptedAnswer":{"@type":"Answer","text":"資格を失ってから6か月以内に手続きをしないと、資産は国民年金基金連合会に自動で移されます。運用されず手数料がかかり、その期間は通算加入者等期間に数えられません。"}}]}</script>
+<style>
+.guide-nav { max-width: 720px; margin: 0 auto 16px; padding: 0 20px; font-size: 0.85rem; color: var(--color-text-muted); }
+.guide-nav a { color: var(--color-text-muted); }
+.guide-lead { font-size: 0.95rem; }
+.guide-table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.9rem; }
+.guide-table th, .guide-table td { border: 1px solid var(--color-border); padding: 8px 10px; text-align: left; vertical-align: top; }
+.guide-table th { background: var(--color-bg); font-weight: 600; }
+.guide-table td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.guide-table tr.is-best td { background: var(--color-badge-bg); font-weight: 700; }
+.guide-note { font-size: 0.85rem; color: var(--color-text-muted); }
+.card--article h3 { font-size: 1rem; margin: 18px 0 6px; }
+.guide-cta { text-align: center; }
+.guide-cta .btn { display: inline-block; text-decoration: none; }
+.guide-calc { text-align: left; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 8px; padding: 12px 14px; margin: 14px 0; font-size: 0.92rem; }
+.guide-calc label { display: block; font-weight: 600; margin: 8px 0 4px; font-size: 0.88rem; }
+.guide-calc input, .guide-calc select { width: 100%; padding: 8px; border: 1px solid var(--color-border); border-radius: 6px; font-size: 1rem; background: var(--color-surface); color: var(--color-text); }
+.guide-calc .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.guide-calc .row3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; }
+.guide-result { margin-top: 12px; font-size: 0.95rem; }
+.guide-result strong { font-size: 1.1rem; }
+.table-scroll { overflow-x: auto; }
+.date-row { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 6px; margin-bottom: 8px; }
+.form-help { font-size: 0.85rem; color: var(--color-text-muted); }
+.guide-calc .quiz-select, .date-row .quiz-select { width: 100%; }
+.nw { white-space: nowrap; }
+.card--article a[target="_blank"] { overflow-wrap: anywhere; }
+.badge--pr { flex-shrink: 0; white-space: nowrap; }
+.art-cta { text-align: center; margin: 16px 0 4px; padding: 14px 12px; border: 1px dashed var(--color-border); border-radius: 8px; }
+.card--article .art-cta p { font-size: 0.85rem; margin: 0 0 10px; }
+.art-cta__links { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <nav class="guide-nav" aria-label="パンくずリスト">
+    <a href="../../../">HAKONIWA LAB</a> &raquo;
+    <a href="../../">退職金手取りシミュレーター</a> &raquo;
+    <span aria-current="page">退職一時金が企業型DCに変わるとき</span>
+  </nav>
+
+  <header class="app-header">
+    <p class="app-header__eyebrow">制度が変わると言われた人へ</p>
+    <h1 class="app-header__title">退職一時金が<br>企業型DCに変わると言われたら</h1>
+    <p class="app-header__lead">60歳まで引き出せなくなる、税金は受け取り順で変わる。先に確かめることをまとめました。</p>
+  </header>
+  <p class="pr-note">この記事にはプロモーション(広告)が含まれます。</p>
+
+  <main class="main">
+
+    <section class="article">
+
+      <div class="card card--article">
+      <h2>先に結論</h2>
+      <ul>
+        <li>退職のときに会社からもらうお金が、<strong>原則60歳まで引き出せない自分の運用口座</strong>に変わります。金額は約束されず、運用の結果で増えも減りもします。</li>
+        <li>60歳時点で加入期間が10年に満たないと、受け取り始められる年齢が遅くなります。途中で制度が変わる人は、まず自分の加入期間を数えてください。</li>
+        <li>過去の勤続分の退職金が残る人は、<strong>退職金とDCの受け取り順で税金が変わります</strong>。2026年1月からはDCを先に受け取ると9年内の退職金に影響します(いわゆる10年ルール)。</li>
+        <li>退職するときは手続きが要ります。6か月以内に移換しないと自動移換になり、運用されず手数料がかかります。</li>
+      </ul>
+      </div>
+
+      <div class="card card--article">
+      <h2>退職一時金と企業型DCで変わること</h2>
+        <div class="table-scroll">
+          <table class="guide-table">
+            <thead><tr><th></th><th>退職一時金</th><th>企業型DC</th></tr></thead>
+            <tbody>
+            <tr><td>金額</td><td>退職金規程で計算される</td><td>会社の掛金と運用の結果で決まる</td></tr>
+            <tr><td>運用</td><td>会社が責任を持つ</td><td>自分で商品を選ぶ。損失も自分の負担</td></tr>
+            <tr><td>受け取る時期</td><td>退職したとき</td><td>原則60歳以降(75歳まで)</td></tr>
+            <tr><td>途中で辞めたとき</td><td>自己都合などで減ることがある</td><td>自分の資産として持ち運ぶ。ただし60歳までは原則引き出せない</td></tr>
+            <tr><td>一時金で受け取るときの税金</td><td>退職所得</td><td>退職所得。掛金を出した期間を勤続年数として控除を計算する</td></tr>
+            <tr><td>年金で受け取る</td><td>会社による</td><td>受け取れる(規約の範囲で)。雑所得</td></tr>
+            </tbody>
+          </table>
+        </div>
+      <p>どちらが得とは決められません。退職一時金は金額の見通しが立つ代わりに会社の規程に左右され、企業型DCは自分の資産になる代わりに運用の結果を自分で引き受けます。</p>
+      </div>
+
+      <div class="card card--article">
+      <h2>60歳で受け取れるとは限らない</h2>
+      <p>受け取り始められる年齢は、60歳時点の通算加入者等期間で決まります。40代や50代で制度が変わる人は特に確かめてください。</p>
+        <div class="table-scroll">
+          <table class="guide-table">
+            <thead><tr><th>60歳時点の通算加入者等期間</th><th>受け取り始められる年齢</th></tr></thead>
+            <tbody>
+            <tr><td>10年以上</td><td>60歳</td></tr>
+            <tr><td>8年以上10年未満</td><td>61歳</td></tr>
+            <tr><td>6年以上8年未満</td><td>62歳</td></tr>
+            <tr><td>4年以上6年未満</td><td>63歳</td></tr>
+            <tr><td>2年以上4年未満</td><td>64歳</td></tr>
+            <tr><td>1か月以上2年未満</td><td>65歳</td></tr>
+            </tbody>
+          </table>
+        </div>
+      <p>60歳以上で初めて加入した場合は、加入から5年が過ぎてからです。受け取りは75歳になるまでに始める必要があります。60歳より前に引き出せる脱退一時金は、資産が少ないなどの限られた場合だけです。</p>
+      </div>
+
+      <div class="card card--article">
+      <h2>過去の勤続分が残る人は、受け取り順で税金が変わる</h2>
+      <p>制度の切り替えでは、切り替え前の勤続分を退職時に一時金で払う会社と、DCに移す会社があります。一時金が残る人は、退職金とDCの2つを受け取ることになり、退職所得控除の重なりが問題になります。</p>
+      <p>例として、22歳で入社して40歳で制度が変わり、過去の勤続分の退職金が1,500万円、DCが20年の加入で1,000万円になった人を計算します。下の税額は所得税と住民税の合計です。</p>
+      <h3>60歳で退職して退職金を受け取る人</h3>
+        <div class="table-scroll">
+          <table class="guide-table">
+            <thead><tr><th>DCを受け取る年齢</th><th>順番</th><th>税金の合計</th></tr></thead>
+            <tbody>
+            <tr><td>60歳</td><td>同じ年に受け取る</td><td class="num">34.5万円</td></tr>
+            <tr><td>62歳</td><td>退職金が2年先(19年ルールに当たる)</td><td class="num">59.8万円</td></tr>
+            <tr><td>65歳</td><td>退職金が5年先(19年ルールに当たる)</td><td class="num">59.8万円</td></tr>
+            <tr><td>70歳</td><td>退職金が10年先(19年ルールに当たる)</td><td class="num">59.8万円</td></tr>
+            <tr><td>75歳</td><td>退職金が15年先(19年ルールに当たる)</td><td class="num">59.8万円</td></tr>
+            </tbody>
+          </table>
+        </div>
+      <h3>65歳まで働いて退職金を受け取る人</h3>
+        <div class="table-scroll">
+          <table class="guide-table">
+            <thead><tr><th>DCを受け取る年齢</th><th>順番</th><th>税金の合計</th></tr></thead>
+            <tbody>
+            <tr><td>60歳</td><td>DCが5年先(10年ルールに当たる)</td><td class="num">15.1万円</td></tr>
+            <tr><td>62歳</td><td>DCが3年先(10年ルールに当たる)</td><td class="num">15.1万円</td></tr>
+            <tr><td>65歳</td><td>同じ年に受け取る</td><td class="num">6.8万円</td></tr>
+            <tr><td>70歳</td><td>退職金が5年先(19年ルールに当たる)</td><td class="num">59.8万円</td></tr>
+            <tr><td>75歳</td><td>退職金が10年先(19年ルールに当たる)</td><td class="num">59.8万円</td></tr>
+            </tbody>
+          </table>
+        </div>
+      <p>この例では、60歳で退職する人は、同じ年に受け取ると税金が34.5万円、DCを75歳まで遅らせると59.8万円で、最も少ないのは60歳受け取りの34.5万円でした。65歳まで働く人は、DCを60歳で先に受け取ると15.1万円、同じ年なら6.8万円、最も少ないのは65歳受け取りの6.8万円でした。金額や期間で結果は変わるので、<a href="../../ideco/">受け取り順のシミュレーター</a>で自分の数字を入れてください。iDeCoとして作られていますが、企業型DCの一時金も同じ計算です。</p>
+      <p>数え方は暦年です。「DCが先」は前年以前9年内の退職金、「退職金が先」は前年以前19年内の退職金が、控除の調整の対象になります。</p>
+      </div>
+
+      <div class="card card--article">
+      <h2>同じ掛金でも、運用で受け取る額は変わる</h2>
+        <div class="table-scroll">
+          <table class="guide-table">
+            <thead><tr><th>年利</th><th>月2万円×20年</th><th>月2万円×30年</th><th>月3万円×20年</th></tr></thead>
+            <tbody>
+            <tr><td>0%</td><td class="num">480万円</td><td class="num">720万円</td><td class="num">720万円</td></tr>
+            <tr><td>1%</td><td class="num">531万円</td><td class="num">839万円</td><td class="num">797万円</td></tr>
+            <tr><td>2%</td><td class="num">590万円</td><td class="num">985万円</td><td class="num">884万円</td></tr>
+            <tr><td>3%</td><td class="num">657万円</td><td class="num">1,165万円</td><td class="num">985万円</td></tr>
+            </tbody>
+          </table>
+        </div>
+      <p>毎月の積み立てを同じ年利で続けた場合の計算で、手数料や税金は入れていません。将来の利回りを約束するものではなく、マイナスになることもあります。会社の説明資料に想定利回りが書いてあれば、その利回りで運用できなかったときに、もとの退職金より少なくならないかを見てください。</p>
+      </div>
+
+      <div class="card card--article">
+      <h2>会社に確かめたい6つのこと</h2>
+      <ol>
+        <li><strong>切り替え前の勤続分はどうなるか。</strong>退職時に一時金で払うのか、DCに移すのか。いくらになるのかを書面で確かめます。</li>
+        <li><strong>会社の掛金はいくらか。</strong>年齢や等級でどう変わるか、もとの退職金と比べて少なくならないかを見ます。</li>
+        <li><strong>給与で受け取る選択肢があるか。</strong>掛金の代わりに給与で受け取れる会社もあります。給与で受け取ると税金と社会保険料の対象になります。逆に給与を減らして掛金にする形だと、標準報酬月額が下がり、年金や手当の額に影響することがあります。</li>
+        <li><strong>60歳時点の加入期間は10年になるか。</strong>ならないなら、受け取り始められる年齢を確かめます。</li>
+        <li><strong>選ばなかったときの運用先はどれか。</strong>商品を指定しないと、会社が決めた商品(指定運用方法)で運用されることがあります。</li>
+        <li><strong>辞めるときの手続きは誰がするか。</strong>退職後6か月以内にiDeCoや転職先のDCへ移換します。しないと自動移換になり、運用されず手数料がかかって、その期間は通算加入者等期間にも数えられません。</li>
+      </ol>
+        <div class="art-cta">
+          <p>受け取り方や老後のお金の見通しを、ファイナンシャルプランナーに無料で相談できるサービスもあります。</p>
+          <div class="art-cta__links"><a class="result-card__link result-card__link--offer" href="https://px.a8.net/svt/ejp?a8mat=4BEET0+5Q09CI+4GN2+1NJK7M" target="_blank" rel="nofollow sponsored noopener">老後資金・資産形成をFPに無料相談！厳選プロが丁寧サポート【ガーデン】<span class="badge badge--pr">PR</span></a><img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4BEET0+5Q09CI+4GN2+1NJK7M" alt=""><a class="result-card__link result-card__link--offer" href="https://px.a8.net/svt/ejp?a8mat=4B8DGT+864EVM+5MAS+5YJRM" target="_blank" rel="nofollow sponsored noopener">「未来への安心を、今ここで。無料FP相談でハーゲンダッツギフト券をゲット！」<span class="badge badge--pr">PR</span></a><img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4B8DGT+864EVM+5MAS+5YJRM" alt=""><a class="result-card__link result-card__link--offer" href="https://px.a8.net/svt/ejp?a8mat=4BEET0+63P89E+5YVA+5YJRM" target="_blank" rel="nofollow sponsored noopener">独立FPが保険・資産運用を丸ごと無料診断！【マネカフェ】<span class="badge badge--pr">PR</span></a><img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=4BEET0+63P89E+5YVA+5YJRM" alt=""></div>
+        </div>
+      </div>
+
+      <div class="card card--article">
+        <h2>よくある質問</h2>
+        <details class="faq-item"><summary>退職金が企業型DCに変わると、辞めたときにお金はもらえないのですか？</summary><p>原則として60歳まで引き出せません。辞めたあとは、iDeCoや転職先の企業型DCに資産を移して運用を続けます。脱退一時金を受け取れるのは、資産が少ないなどの限られた場合だけです。</p></details>
+        <details class="faq-item"><summary>企業型DCの一時金は退職金と同じ税金ですか？</summary><p>どちらも退職所得です。企業型DCは掛金を出した期間を勤続年数として退職所得控除を計算します。退職金も受け取る人は、受け取り順で控除が調整されることがあります。</p></details>
+        <details class="faq-item"><summary>10年ルールは企業型DCにも当たりますか？</summary><p>当たります。国税庁の説明では、確定拠出年金の老齢給付金として支給される一時金を対象にしていて、iDeCoと企業型DCを分けていません。2026年1月1日以後に受け取るDC一時金が対象です。</p></details>
+        <details class="faq-item"><summary>損をすることはありますか？</summary><p>あります。企業型DCは運用の結果で受け取る額が変わり、元本を下回ることもあります。元本確保型の商品が用意されていれば選ぶこともできますが、増えにくくなります。</p></details>
+        <details class="faq-item"><summary>退職後に何もしないとどうなりますか？</summary><p>資格を失ってから6か月以内に手続きをしないと、資産は国民年金基金連合会に自動で移されます。運用されず手数料がかかり、その期間は通算加入者等期間に数えられません。</p></details>
+      </div>
+
+      <div class="card card--article">
+        <h2>出典</h2>
+        <ul>
+          <li>厚生労働省「確定拠出年金制度の概要」<br><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/nenkin/nenkin/kyoshutsu/gaiyou.html" target="_blank" rel="noopener">https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/nenkin/nenkin/kyoshutsu/gaiyou.html</a></li>
+          <li>厚生労働省「確定拠出年金Q&amp;A」(給与を減らして掛金にする場合の説明。No.70)<br><a href="https://www.mhlw.go.jp/content/000653917.pdf" target="_blank" rel="noopener">https://www.mhlw.go.jp/content/000653917.pdf</a></li>
+          <li>国税庁「No.1420 退職金を受け取ったとき(退職所得)」<br><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1420.htm" target="_blank" rel="noopener">https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1420.htm</a></li>
+          <li>国税庁「No.2732 退職手当等に対する源泉徴収」<br><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/gensen/2732.htm" target="_blank" rel="noopener">https://www.nta.go.jp/taxes/shiraberu/taxanswer/gensen/2732.htm</a></li>
+          <li>iDeCo公式サイト「転職・退職された方」<br><a href="https://www.ideco-koushiki.jp/retirement/" target="_blank" rel="noopener">https://www.ideco-koushiki.jp/retirement/</a></li>
+          <li>国民年金基金連合会「自動移換にかかる手数料改定のお知らせ」<br><a href="https://www.ideco-koushiki.jp/library/pdf/tesuuryoukaitei202604.pdf" target="_blank" rel="noopener">https://www.ideco-koushiki.jp/library/pdf/tesuuryoukaitei202604.pdf</a></li>
+        </ul>
+      </div>
+
+      <div class="card card--article">
+        <h2>あわせて読みたい</h2>
+        <ul>
+          <li><a href="../../ideco/">iDeCoと退職金の受け取り順シミュレーター</a></li>
+          <li><a href="../../guide/ideco-10nen-rule/">iDeCoの10年ルールとは？退職金との受け取り順を比較表で解説</a></li>
+          <li><a href="../../guide/taishokukin-tedori-keisan/">退職金の手取りの計算</a></li>
+          <li><a href="../../">退職金手取りシミュレーター</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- site-nav:start -->
+  <style>
+  .site-nav { margin: 40px 0 0; padding: 22px 0 0; border-top: 1px solid var(--color-border, var(--line, #dbcba0)); color: var(--color-text, var(--ink, #2b2620)); text-align: left; }
+  .site-nav__title { margin: 0 0 14px; font-size: 0.82rem; font-weight: 700; color: var(--color-text-muted, var(--muted, #6e6248)); }
+  .site-nav__title a { font-family: Georgia, "Times New Roman", serif; font-size: 0.95rem; letter-spacing: 0.04em; color: var(--color-text, var(--ink, #2b2620)); text-decoration: none; }
+  .site-nav__groups { display: grid; gap: 14px 24px; }
+  @media (min-width: 560px) { .site-nav__groups { grid-template-columns: 1fr 1fr; } }
+  .site-nav__label { margin: 0 0 4px; font-size: 0.74rem; font-weight: 700; color: var(--color-text-muted, var(--muted, #6e6248)); }
+  .site-nav__links { display: flex; flex-wrap: wrap; gap: 2px 14px; margin: 0; padding: 0; list-style: none; font-size: 0.86rem; line-height: 1.7; }
+  .site-nav__links li { margin: 0; padding: 0; }
+  .site-nav__links li::before { content: none; }
+  .site-nav__links a { color: var(--color-primary, var(--navy, #a8631f)); }
+  .site-nav__all { margin: 16px 0 0; font-size: 0.86rem; text-align: right; }
+  .site-nav__all a { color: var(--color-primary, var(--navy, #a8631f)); font-weight: 700; }
+  .app-footer a { color: var(--color-text-muted, var(--muted, #6e6248)); }
+  </style>
+  <nav class="site-nav" aria-label="HAKONIWA LABのツール">
+    <p class="site-nav__title"><a href="../../../">HAKONIWA LAB</a> の無料ツール</p>
+    <div class="site-nav__groups">
+      <div>
+        <p class="site-nav__label">家族を見送ったあとに</p>
+        <ul class="site-nav__links">
+          <li><a href="../../../houyou-calendar/">法要日程カレンダー</a></li>
+          <li><a href="../../../houyou-calendar/hayami/">年忌早見表</a></li>
+          <li><a href="../../../houyou-calendar/tetsuzuki/">死亡後の手続きの期限</a></li>
+          <li><a href="../../../houyou-calendar/pet/">ペットの法要</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="site-nav__label">仕事を辞めるとき・変えるとき</p>
+        <ul class="site-nav__links">
+          <li><a href="../../../resignation-letter-generator/">退職願・退職届を作る</a></li>
+          <li><a href="../../../retirement-simulator/">退職金の手取り</a></li>
+          <li><a href="../../../subsidy-checker/">使える給付金を探す</a></li>
+          <li><a href="../../../career-checker/">転職エージェントを選ぶ</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="site-nav__label">収入と税金を知りたいとき</p>
+        <ul class="site-nav__links">
+          <li><a href="../../../takehome-calculator/">手取り年収</a></li>
+          <li><a href="../../../furusato-simulator/">ふるさと納税の上限額</a></li>
+          <li><a href="../../../sidejob-tax-simulator/">副業の税金</a></li>
+          <li><a href="../../../sidejob-checker/">向いている副業</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="site-nav__label">備えと資産</p>
+        <ul class="site-nav__links">
+          <li><a href="../../../insurance-checker/">必要な保険</a></li>
+          <li><a href="../../../retirement-simulator/ideco/">iDeCoの受け取り方</a></li>
+          <li><a href="../../../stock-screener/">株の条件検索</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="site-nav__label">暦と楽しみ</p>
+        <ul class="site-nav__links">
+          <li><a href="../../../birthday-fortune/">生まれ日診断</a></li>
+          <li><a href="../../../birthday-fortune/calendar/">吉日カレンダー</a></li>
+          <li><a href="../../../meguri-log/">めぐった場所の記録</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="site-nav__all"><a href="../../../">すべてのツールを見る →</a></p>
+  </nav>
+  <!-- site-nav:end -->
+
+  <footer class="app-footer">
+    <p>本記事は公開されている法令と公的機関の説明をもとに一般的な内容をまとめたものです。実際の制度は会社の規約によって違います。個別の判断は会社の担当者、税務署、税理士などに確かめてください。「PR」表記のあるリンクにはプロモーション(アフィリエイト広告)が含まれます。</p>
+    <p><a href="../../../about.html">運営者情報</a>・<a href="../../../contact.html">お問い合わせ</a>・<a href="../../../privacy.html">プライバシーポリシー</a></p>
+  </footer>
+
+</div>
+</body>
+</html>

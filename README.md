@@ -83,3 +83,7 @@ iDeCo一時金を受け取る年齢を1歳ずつ動かし(退職金の年齢は�
 A8 の案件ページに「広告とわかる表示をファーストビュー等にわかりやすく(無いと提携解除の可能性)」とあるので、広告(A8・アクセストレード・バリューコマース)のあるページの見出しの直下に `<p class="pr-note">…プロモーション(広告)が含まれます。</p>` を出した(CSS は css/style.css の `.pr-note`。`.app-header` の直後は中央寄せ)。各リンクの「PR」バッジとフッターの注記はそのまま。**新しく広告を入れるページにも同じ1行を入れる。**
 
 - nenkin-jukyu/・taishokubi/・guide/zaishoku-rourei-nenkin/。生成元 `tools/money-articles/kit.py` の `page()` が、本文に px.a8.net があれば自動で出す
+
+## 2026-11-10 退職一時金が企業型DCに変わる人向けの記事 `guide/taishoku-ichijikin-dc/`
+
+- 生成元は tools/money-articles/build_kigyodc.py。税額は ideco-calc.js の compareIdecoTiming を node で呼ぶ(例: 退職金1,500万円+DC1,000万円)。受け取り開始年齢は厚労省、10年・19年ルールは国税庁 No.2732、自動移換は iDeCo 公式で確認。FP相談の広告あり(冒頭にPR表記)
